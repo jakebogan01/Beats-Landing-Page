@@ -1,0 +1,14 @@
+{
+  "name": "beats-landing-page",
+  "version": "1.0.0",
+  "description": "Beats Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "minify": "css-minify -f dist/output.css"
+  },
+  "author": "Jake Bogan",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
