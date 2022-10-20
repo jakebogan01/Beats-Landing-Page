@@ -812,6 +812,18 @@ select {
   margin-top: 4.6875rem;
 }
 
+.mt-\[5\.75rem\] {
+  margin-top: 5.75rem;
+}
+
+.mt-\[3\.875rem\] {
+  margin-top: 3.875rem;
+}
+
+.block {
+  display: block;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -846,6 +858,10 @@ select {
 
 .w-\[15\.9375rem\] {
   width: 15.9375rem;
+}
+
+.max-w-\[15\.625rem\] {
+  max-width: 15.625rem;
 }
 
 .-translate-x-20 {
@@ -899,6 +915,12 @@ select {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-y-7 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -943,6 +965,14 @@ select {
   padding-top: 4.375rem;
 }
 
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .font-poppins {
   font-family: Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -972,6 +1002,20 @@ select {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-\[3\.5rem\] {
+  font-size: 3.5rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-semibold {
