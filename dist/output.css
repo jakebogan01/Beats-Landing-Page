@@ -808,6 +808,10 @@ select {
   margin-top: 3.4375rem;
 }
 
+.mt-\[4\.6875rem\] {
+  margin-top: 4.6875rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -838,6 +842,10 @@ select {
 
 .w-\[15\.5rem\] {
   width: 15.5rem;
+}
+
+.w-\[15\.9375rem\] {
+  width: 15.9375rem;
 }
 
 .-translate-x-20 {
@@ -883,6 +891,12 @@ select {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-x-hidden {
