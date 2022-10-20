@@ -772,12 +772,37 @@ select {
   right: -10rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.-right-1\/2 {
+  right: -50%;
+}
+
+.-right-\[40\%\] {
+  right: -40%;
+}
+
+.-bottom-\[100px\] {
+  bottom: -100px;
+}
+
+.-bottom-\[2\.9375rem\] {
+  bottom: -2.9375rem;
+}
+
 .z-10 {
   z-index: 10;
 }
 
 .z-0 {
   z-index: 0;
+}
+
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .mt-\[3\.125rem\] {
@@ -866,6 +891,14 @@ select {
 
 .w-\[14\.5rem\] {
   width: 14.5rem;
+}
+
+.w-\[9\.25rem\] {
+  width: 9.25rem;
+}
+
+.w-\[18\.75rem\] {
+  width: 18.75rem;
 }
 
 .min-w-\[11\.25rem\] {
@@ -965,6 +998,10 @@ select {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .resize {
   resize: both;
 }
@@ -1017,6 +1054,10 @@ select {
   border-radius: 0.5rem;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1031,6 +1072,16 @@ select {
   background-color: rgb(30 30 33 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#181A1B\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 26 27 / var(--tw-bg-opacity));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1039,6 +1090,11 @@ select {
 .py-\[200px\] {
   padding-top: 200px;
   padding-bottom: 200px;
+}
+
+.py-\[2\.1875rem\] {
+  padding-top: 2.1875rem;
+  padding-bottom: 2.1875rem;
 }
 
 .pt-6 {
