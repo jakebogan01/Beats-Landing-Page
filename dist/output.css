@@ -804,6 +804,14 @@ select {
   bottom: -2.9375rem;
 }
 
+.-right-\[100px\] {
+  right: -100px;
+}
+
+.-right-\[9\.0625rem\] {
+  right: -9.0625rem;
+}
+
 .z-10 {
   z-index: 10;
 }
