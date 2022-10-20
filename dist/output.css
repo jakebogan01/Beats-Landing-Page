@@ -860,6 +860,10 @@ select {
   width: 15.9375rem;
 }
 
+.min-w-\[11\.25rem\] {
+  min-width: 11.25rem;
+}
+
 .max-w-\[15\.625rem\] {
   max-width: 15.625rem;
 }
