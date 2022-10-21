@@ -11,7 +11,11 @@ module.exports = {
       },
       transitionProperty: {
         'text': 'font-size',
-      }
+      },
+      screens: {
+        '593': '593px',
+        '948': '948px',
+      },
     },
   },
   plugins: [
