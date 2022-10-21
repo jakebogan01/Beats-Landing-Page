@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         poppins: ['Poppins', ...defaultTheme.fontFamily.sans],
       },
+      transitionProperty: {
+        'text': 'font-size',
+      }
     },
   },
   plugins: [
