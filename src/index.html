@@ -342,10 +342,15 @@
             </section>
         </main>
 
-        <footer class="mt-[5.75rem] px-6">
-            <div>
-                <div class="flex space-x-6">
-                    <div>
+        <footer class="mt-[5.75rem] px-6 lg:mt-[11.75rem] transition-[margin]">
+            <div class="flex flex-col md:flex-row md:space-x-20 lg:space-x-40 max-w-[70.8125rem] mx-auto">
+                <div class="flex-1 flex md:justify-between">
+                    <div class="hidden md:block">
+                        <a href="/" class="inline-block w-6">
+                            <img src="images/content/logo.png" alt="logo" class="w-full cursor-pointer">
+                        </a>
+                    </div>
+                    <div class="mr-6 md:mr-0">
                         <h5 class="font-semibold text-xl">Products</h5>
                         <ul>
                             <li>
@@ -380,13 +385,13 @@
                         </ul>
                     </div>
                 </div>
-                <div class="mt-5">
+                <div class="flex-1 mt-5 md:mt-0">
                     <form id="emailForm" class="flex items-center justify-between bg-[#181A1B] rounded-lg py-2 px-4">
                         <div class="mr-2">
                             <label for="email" class="sr-only">Email</label>
                             <input type="email" name="email" id="email" class="block w-full outline-none outline-0 border-none border-0 border-transparent bg-transparent caret-white placeholder-[#BDC0C2] focus:border-transparent focus:bg-transparent focus:text-white focus:placeholder-gray-500 focus:outline-none focus:ring-0 focus:ring-transparent focus:placeholder:text-transparent font-light text-[0.9375rem]" placeholder="Email" required>
                         </div>
-                        <button type="submit" class="flex items-center justify-center bg-[#0A0A0B] w-[8.125rem] h-[3.1875rem] rounded-lg">
+                        <button type="submit" class="flex items-center justify-center bg-[#0A0A0B] min-w-[8.125rem] w-[8.125rem] h-[3.1875rem] rounded-lg">
                             <svg width="18" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.434 8H3L1.518 2.101a.496.496 0 0 1-.018-.105c-.016-.54.58-.915 1.095-.668L16.5 8 2.595 14.672c-.51.245-1.098-.12-1.095-.65a.495.495 0 0 1 .025-.14l1.1-3.632" stroke="#F8F8F8" stroke-width="2.083" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             <span class="ml-2 text-[0.8125rem] cursor-pointer">Subscribe</span>
                         </button>
@@ -408,15 +413,14 @@
                             </a>
                         </div>
 
-                        <a href="/" class="inline-block w-6">
+                        <a href="/" class="md:hidden inline-block w-6">
                             <img src="images/content/logo.png" alt="logo" class="w-full cursor-pointer">
                         </a>
                     </div>
-
-                    <div class="mt-10 my-2">
-                        <p class="text-[#A2A6A9] text-center font-light text-[0.8125rem]">Created By Jake Bogan</p>
-                    </div>
                 </div>
+            </div>
+            <div class="mt-10 my-2">
+                <p class="text-[#A2A6A9] text-center font-light text-[0.8125rem]">Created By Jake Bogan</p>
             </div>
         </footer>
 
