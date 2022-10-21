@@ -91,13 +91,36 @@
                 width: 100%;
                 z-index: 2;
             }
+            .nav-underline::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 0.15rem;
+                width: 0%;
+                background-color: #ffffff;
+                transition: all 0.3s ease;
+            }
+            .nav-underline:hover:before {
+                width: 100%;
+            }
+            header ul li .nav-underline:before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .slide:hover,
+            .slide:focus {
+                box-shadow: inset 11em 0 0 0 #ffffff;
+                font-weight: bold;
+                color: #000000;
+            }
         </style>
     </head>
     <body class="relative light antialiase bg-[#0F0F10] font-poppins text-white overflow-x-hidden">
 
         <header>
             <nav class="relative flex justify-end max-w-[70.8125rem] mx-auto">
-                <ul class="absolute top-0 left-0 w-full flex justify-between px-6 pt-9">
+                <ul class="absolute top-0 left-0 w-full flex justify-between px-6 pt-9 z-20">
                     <li>
                         <a href="/" class="inline-block w-6 lg:w-8 transition-[width]">
                             <img src="images/content/logo.png" alt="logo" class="w-full cursor-pointer">
@@ -111,19 +134,19 @@
                 </ul>
                 <ul class="hidden lg:flex relative items-center space-x-14 px-6 pt-6 z-20">
                     <li>
-                        <a href="/" class="text-base font-bold">Home</a>
+                        <a href="/" class="nav-underline relative text-base font-bold pb-0.5">Home</a>
                     </li>
                     <li>
-                        <a href="/" class="text-base font-bold">Specs</a>
+                        <a href="/" class="nav-underline relative text-base font-bold pb-0.5">Specs</a>
                     </li>
                     <li>
-                        <a href="/" class="text-base font-bold">Case</a>
+                        <a href="/" class="nav-underline relative text-base font-bold pb-0.5">Case</a>
                     </li>
                     <li>
-                        <a href="/" class="text-base font-bold">Products</a>
+                        <a href="/" class="nav-underline relative text-base font-bold pb-0.5">Products</a>
                     </li>
                     <li>
-                        <a href="#" class="flex justify-center items-center font-light text-[0.9375rem] bg-[#1E1E21] rounded-lg w-[9.75rem] h-[3.4375rem]">Shop</a>
+                        <a href="#" class="slide flex justify-center items-center font-light text-[0.9375rem] bg-[#1E1E21] rounded-lg w-[9.75rem] h-[3.4375rem] transition-all duration-300">Shop</a>
                     </li>
                 </ul>
             </nav>
