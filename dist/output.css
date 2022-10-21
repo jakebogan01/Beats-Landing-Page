@@ -1121,6 +1121,10 @@ select {
   margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -1185,6 +1189,18 @@ select {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.stroke-green-50 {
+  stroke: #f0fdf4;
+}
+
+.stroke-2 {
+  stroke-width: 2;
+}
+
+.stroke-\[6px\] {
+  stroke-width: 6px;
 }
 
 .px-6 {
@@ -1445,6 +1461,24 @@ select {
   transition-duration: 300ms;
 }
 
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:font-bold:hover {
+  font-weight: 700;
+}
+
+.hover\:text-black:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.hover\:opacity-75:hover {
+  opacity: 0.75;
+}
+
 .focus\:border-transparent:focus {
   border-color: transparent;
 }
@@ -1493,6 +1527,14 @@ select {
 
 .group:hover .group-hover\:hidden {
   display: none;
+}
+
+.group:hover .group-hover\:fill-black {
+  fill: #000;
+}
+
+.group:hover .group-hover\:stroke-black {
+  stroke: #000;
 }
 
 @media (min-width: 593px) {
