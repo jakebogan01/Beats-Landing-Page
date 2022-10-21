@@ -1569,6 +1569,10 @@ select {
     margin-top: 11.75rem;
   }
 
+  .lg\:mt-\[2\.625rem\] {
+    margin-top: 2.625rem;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -1579,6 +1583,10 @@ select {
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:max-w-\[35\.25rem\] {
+    max-width: 35.25rem;
   }
 
   .lg\:translate-x-32 {
