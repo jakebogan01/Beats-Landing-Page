@@ -95,21 +95,6 @@
                 left: 50%;
                 transform: translateX(-50%);
             }
-            /*.slide::before {*/
-            /*    content: "";*/
-            /*    position: absolute;*/
-            /*    top: 0;*/
-            /*    left: 0;*/
-            /*    height: 100%;*/
-            /*    width: 0;*/
-            /*    background-color: #ffffff;*/
-            /*    transition: all 0.3s ease;*/
-            /*}*/
-            /*.slide:hover ,*/
-            /*.slide:focus {*/
-            /*    box-shadow: inset 16em 0 0 0 #ffffff;*/
-            /*    color: #000000;*/
-            /*}*/
             .logo:hover .logo-svg{
                 transform: rotateY(180deg);
             }
@@ -145,7 +130,14 @@
                         <a href="#products" class="nav-underline relative text-base font-bold pb-0.5">Products</a>
                     </li>
                     <li data-aos="fade-left" data-aos-duration="700" data-aos-delay="400">
-                        <a href="#" class="slide relative flex justify-center items-center font-light text-[0.9375rem] bg-[#1E1E21] rounded-lg w-[9.75rem] h-[3.4375rem] overflow-hidden transition-all duration-700">Shop</a>
+                        <a href="#" class="relative flex font-light text-[0.9375rem] bg-[#1E1E21] rounded-lg w-[9.75rem] h-[3.4375rem] overflow-hidden transition-all border border-transparent hover:border-[#55555E] duration-700 group">
+                            <span class="flex justify-center items-center h-full w-full transform group-hover:-translate-x-[0.625rem] transition-transform cursor-pointer duration-700">
+                                Shop
+                            </span>
+                            <span class="absolute top-0 -right-[2.25rem] group-hover:-right-0 h-full flex justify-center items-center px-2 bg-[#313135] transition-all cursor-pointer duration-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" /></svg>
+                            </span>
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -178,10 +170,12 @@
                         <p data-aos="zoom-in" data-aos-delay="400" class="text-sm md:text-[1rem] leading-[2rem] text-[#BDC0C2] font-light max-w-[27.375rem] sm:max-w-[22.875rem] md:max-w-[24.875rem] transition-all">Enjoy award-winning Beats sound with wireless listening freedom and a sleek, streamlined design with comfortable padded earphones, delivering first-rate playback.</p>
 
                         <div class="mt-[3.4375rem]">
-                            <button data-aos="zoom-in" data-aos-delay="450" type="button" class="group slide relative flex items-center justify-center bg-[#1E1E21] rounded-lg w-[15.5rem] h-[3.4375rem] overflow-hidden transition-all">
-                                <svg width="20" height="22" class="mr-4 group-hover:stroke-black transition-all" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.977 8.84A2 2 0 0 1 3.971 7H16.03a2 2 0 0 1 1.994 1.84l.803 10A2 2 0 0 1 16.833 21H3.167a2 2 0 0 1-1.993-2.16l.803-10v0Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 10V5a4 4 0 1 0-8 0v5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span class="text-[0.9375rem] cursor-pointer">Add to Bag</span> <span class="ml-4 text-xl font-bold cursor-pointer">N399k</span>
-                            </button>
+                            <span class="inline-block" data-aos="zoom-in" data-aos-delay="450">
+                                <button type="button" class="group relative flex items-center justify-center bg-[#1E1E21] hover:bg-white hover:text-black rounded-lg w-[15.5rem] h-[3.4375rem] overflow-hidden transition-all duration-300">
+                                    <svg width="20" height="22" class="mr-4 group-hover:stroke-black transition-all duration-300" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.977 8.84A2 2 0 0 1 3.971 7H16.03a2 2 0 0 1 1.994 1.84l.803 10A2 2 0 0 1 16.833 21H3.167a2 2 0 0 1-1.993-2.16l.803-10v0Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 10V5a4 4 0 1 0-8 0v5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <span class="text-[0.9375rem] cursor-pointer">Add to Bag</span> <span class="ml-4 text-xl font-bold cursor-pointer">N399k</span>
+                                </button>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -292,10 +286,12 @@
                     <div class="flex flex-col justify-end md:justify-center pr-6 min-w-[14.5rem] w-[14.5rem] md:min-w-[16.5rem] md:w-[16.5rem]">
                         <p data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" data-aos-offset="300" class="text-[#BDC0C2] text-[0.9375rem] md:text-[1rem] leading-[2rem] font-light transition-text">With a comfortable and adaptable case so that you can store it whenever you want, and keep your durability forever.</p>
                         <div class="mt-[3.4375rem]">
-                            <button data-aos="zoom-in" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300" type="button" class="group flex items-center justify-center bg-[#1E1E21] hover:bg-white rounded-lg w-[9.75rem] h-[3.4375rem] overflow-hidden transition-colors">
-                                <svg width="23" height="23" class="group-hover:stroke-black transition-colors" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 21.917c5.753 0 10.416-4.664 10.416-10.417S17.253 1.083 11.5 1.083 1.083 5.747 1.083 11.5 5.747 21.917 11.5 21.917Z" stroke-width="2.083"/><path d="M11.5 6.292v6.25m0 3.646v.52" stroke-width="2.083" stroke-linecap="round"/></svg>
-                                <span class="ml-4 cursor-pointer group-hover:text-black transition-colors">More info</span>
-                            </button>
+                            <span class="inline-block" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300">
+                                <button type="button" class="group flex items-center justify-center bg-[#1E1E21] hover:bg-white rounded-lg w-[9.75rem] h-[3.4375rem] overflow-hidden transition-colors duration-300">
+                                    <svg width="23" height="23" class="group-hover:stroke-black transition-colors duration-300" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 21.917c5.753 0 10.416-4.664 10.416-10.417S17.253 1.083 11.5 1.083 1.083 5.747 1.083 11.5 5.747 21.917 11.5 21.917Z" stroke-width="2.083"/><path d="M11.5 6.292v6.25m0 3.646v.52" stroke-width="2.083" stroke-linecap="round"/></svg>
+                                    <span class="ml-4 cursor-pointer group-hover:text-black transition-colors duration-300">More info</span>
+                                </button>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -515,9 +511,14 @@
                             <label for="email" class="sr-only">Email</label>
                             <input type="email" name="email" id="email" class="block w-full outline-none outline-0 border-none border-0 border-transparent bg-transparent caret-white placeholder-[#BDC0C2] focus:border-transparent focus:bg-transparent focus:text-white focus:placeholder-gray-500 focus:outline-none focus:ring-0 focus:ring-transparent focus:placeholder:text-transparent font-light text-[0.9375rem]" placeholder="Email" required>
                         </div>
-                        <button type="submit" class="group slide flex items-center justify-center bg-[#0A0A0B] min-w-[8.125rem] w-[8.125rem] h-[3.1875rem] rounded-lg overflow-hidden transition-all duration-700">
-                            <svg width="18" height="16" fill="none" class="group-hover:stroke-black transition-all duration-700" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.434 8H3L1.518 2.101a.496.496 0 0 1-.018-.105c-.016-.54.58-.915 1.095-.668L16.5 8 2.595 14.672c-.51.245-1.098-.12-1.095-.65a.495.495 0 0 1 .025-.14l1.1-3.632" stroke-width="2.083" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            <span class="ml-2 text-[0.8125rem] cursor-pointer">Subscribe</span>
+
+                        <button type="submit" class="relative group flex bg-[#0A0A0B] min-w-[8.125rem] w-[8.125rem] h-[3.1875rem] rounded-lg overflow-hidden border border-transparent hover:border-[#3F3F45] transition-all duration-700">
+                            <span class="flex justify-center items-center h-full w-full transform group-hover:-translate-x-[14px] transition-transform cursor-pointer duration-700">
+                                Subscribe
+                            </span>
+                            <span class="absolute top-0 -right-[30px] group-hover:-right-0 h-full flex justify-center items-center px-1.5 bg-[#29292D] transition-all cursor-pointer duration-700">
+                                <svg width="18" height="16" fill="none" stroke="#ffffff" xmlns="http://www.w3.org/2000/svg"><path d="M7.434 8H3L1.518 2.101a.496.496 0 0 1-.018-.105c-.016-.54.58-.915 1.095-.668L16.5 8 2.595 14.672c-.51.245-1.098-.12-1.095-.65a.495.495 0 0 1 .025-.14l1.1-3.632" stroke-width="2.083" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </span>
                         </button>
                     </form>
 
