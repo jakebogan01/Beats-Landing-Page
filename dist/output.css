@@ -1471,6 +1471,10 @@ select {
   line-height: 2.8125rem;
 }
 
+.leading-\[1\.8125rem\] {
+  line-height: 1.8125rem;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1817,6 +1821,10 @@ select {
   .sm\:max-w-\[6\.25rem\] {
     max-width: 6.25rem;
   }
+
+  .sm\:leading-\[2\.8125rem\] {
+    line-height: 2.8125rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2055,6 +2063,10 @@ select {
     --tw-space-x-reverse: 0;
     margin-right: calc(10rem * var(--tw-space-x-reverse));
     margin-left: calc(10rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:leading-\[2\.8125rem\] {
+    line-height: 2.8125rem;
   }
 
   .lg\:opacity-0 {

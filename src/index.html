@@ -27,16 +27,19 @@
             html {
                 scroll-behavior: smooth;
             }
-            /**, *::before, *::after{*/
-            /*    scrollbar-width: 0 !important;*/
-            /*}*/
-            /*::-webkit-scrollbar{*/
-            /*    display: none !important;*/
-            /*    width: 0 !important;*/
-            /*}*/
-            /*::-webkit-scrollbar-thumb{*/
-            /*    display: none !important;*/
-            /*}*/
+            *, *::before, *::after{
+                scrollbar-width: 6px !important;
+                scrollbar-color: #2C2D2D;
+            }
+            ::-webkit-scrollbar{
+                width: 6px !important;
+                background-color: #0F0F10;
+            }
+            ::-webkit-scrollbar-thumb{
+                border-radius: 6px;
+                background: #555555;
+                border: 3px solid #2C2D2D;
+            }
             h1, h2, h3, h4, h5, p, span, img {
                 -webkit-user-select: none;
                 -moz-user-select: none;
@@ -130,7 +133,7 @@
                         <a href="#products" class="nav-underline relative text-base font-bold pb-0.5">Products</a>
                     </li>
                     <li data-aos="fade-left" data-aos-duration="700" data-aos-delay="400">
-                        <a href="#" class="relative flex font-light text-[0.9375rem] bg-[#1E1E21] rounded-lg w-[9.75rem] h-[3.4375rem] overflow-hidden transition-all border border-transparent hover:border-[#55555E] duration-700 group">
+                        <a href="#" class="relative flex font-light text-[0.9375rem] bg-[#1E1E21] rounded-lg w-[9.75rem] h-[3.4375rem] overflow-hidden transition-all border border-transparent hover:border-[#55555E] duration-700 group" style="will-change: transform;">
                             <span class="flex justify-center items-center h-full w-full transform group-hover:-translate-x-[0.625rem] transition-transform cursor-pointer duration-700">
                                 Shop
                             </span>
@@ -298,22 +301,24 @@
             </section>
 
             <section class="relative mt-[5.75rem] px-6 lg:mt-[11.75rem] transition-[margin]">
-                <div data-aos="zoom-in" data-aos-duration="700" data-aos-offset="300" class="flex items-center justify-between bg-[#181A1B] rounded-xl px-6 948:px-[9.125rem] py-[2.1875rem] 948:py-[3.125rem] max-w-[60.5rem] mx-auto transition-[padding] group">
-                    <div class="relative z-10">
-                        <h3 class="text-[1.125rem] md:text-[1.5rem] leading-[2.8125rem] font-semibold text-[#BDC0C2] group-hover:text-white transition-text transition-colors"><span class="inline-block md:group-hover:-translate-y-8 transition-transform duration-700 ease-in-out">Immerse yourself in</span> <br><span class="inline-block md:group-hover:-translate-y-8 transition-transform duration-700 ease-in-out delay-100">your music</span></h3>
-                        <p class="text-sm md:text-base font-light text-[#BDC0C2] my-3 transition-text">Buy Now, up to 40% off.</p>
-                        <div>
-                            <button data-aos="zoom-in" data-aos-delay="50" data-aos-duration="700" data-aos-offset="300" type="button" class="flex items-center justify-center bg-black group-hover:bg-white rounded-lg w-[9.25rem] h-[3.4375rem] transition-all duration-700">
-                                <svg width="20" height="22" class="mr-4 group-hover:stroke-black transition-all duration-700" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.977 8.84A2 2 0 0 1 3.971 7H16.03a2 2 0 0 1 1.994 1.84l.803 10A2 2 0 0 1 16.833 21H3.167a2 2 0 0 1-1.993-2.16l.803-10v0Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 10V5a4 4 0 1 0-8 0v5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span class="text-[0.9375rem] group-hover:text-black cursor-pointer transition-colors duration-700">Buy now</span>
-                            </button>
+                <div data-aos="zoom-in" data-aos-duration="700" data-aos-offset="300">
+                    <div class="flex items-center justify-between bg-[#181A1B] rounded-xl px-6 948:px-[9.125rem] py-[2.1875rem] 948:py-[3.125rem] max-w-[60.5rem] mx-auto transition-[padding] group">
+                        <div class="relative z-10">
+                            <h3 class="text-[1.125rem] md:text-[1.5rem] leading-[1.8125rem] sm:leading-[2.8125rem] font-semibold text-[#BDC0C2] group-hover:text-white transition-text transition-all"><span class="inline-block md:group-hover:-translate-y-8 transition-transform duration-700 ease-in-out">Immerse yourself in</span> <br><span class="inline-block md:group-hover:-translate-y-8 transition-transform duration-700 ease-in-out delay-100">your music</span></h3>
+                            <p class="text-sm md:text-base font-light text-[#BDC0C2] my-3 transition-text">Buy Now, up to 40% off.</p>
+                            <div>
+                                <button data-aos="zoom-in" data-aos-delay="50" data-aos-duration="700" data-aos-offset="300" type="button" class="flex items-center justify-center bg-black group-hover:bg-white rounded-lg w-[9.25rem] h-[3.4375rem] transition-all duration-700">
+                                    <svg width="20" height="22" class="mr-4 group-hover:stroke-black transition-all duration-700" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.977 8.84A2 2 0 0 1 3.971 7H16.03a2 2 0 0 1 1.994 1.84l.803 10A2 2 0 0 1 16.833 21H3.167a2 2 0 0 1-1.993-2.16l.803-10v0Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 10V5a4 4 0 1 0-8 0v5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <span class="text-[0.9375rem] group-hover:text-black cursor-pointer transition-colors duration-700">Buy now</span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="absolute 593:static -bottom-[2.9375rem] -right-[9.0625rem] w-[18.75rem] md:w-[21.875rem] z-0 transition-[width]">
-                            <span class="block" data-aos="zoom-in-left" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300">
-                                <img src="images/content/sale-headphones-collapse-bkg.png" alt="collapsed headphones" class="images1 w-full">
-                            </span>
+                        <div>
+                            <div class="absolute 593:static -bottom-[2.9375rem] -right-[9.0625rem] w-[18.75rem] md:w-[21.875rem] z-0 transition-[width]">
+                                <span class="block" data-aos="zoom-in-left" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300">
+                                    <img src="images/content/sale-headphones-collapse-bkg.png" alt="collapsed headphones" class="images1 w-full">
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -512,7 +517,7 @@
                             <input type="email" name="email" id="email" class="block w-full outline-none outline-0 border-none border-0 border-transparent bg-transparent caret-white placeholder-[#BDC0C2] focus:border-transparent focus:bg-transparent focus:text-white focus:placeholder-gray-500 focus:outline-none focus:ring-0 focus:ring-transparent focus:placeholder:text-transparent font-light text-[0.9375rem]" placeholder="Email" required>
                         </div>
 
-                        <button type="submit" class="relative group flex bg-[#0A0A0B] min-w-[8.125rem] w-[8.125rem] h-[3.1875rem] rounded-lg overflow-hidden border border-transparent hover:border-[#3F3F45] transition-all duration-700">
+                        <button type="submit" class="relative group flex bg-[#0A0A0B] min-w-[8.125rem] w-[8.125rem] h-[3.1875rem] rounded-lg overflow-hidden border border-transparent hover:border-[#3F3F45] transition-all duration-700" style="will-change: transform;">
                             <span class="flex justify-center items-center h-full w-full transform group-hover:-translate-x-[14px] transition-transform cursor-pointer duration-700">
                                 Subscribe
                             </span>
