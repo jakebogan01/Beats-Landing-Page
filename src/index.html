@@ -95,20 +95,23 @@
                 left: 50%;
                 transform: translateX(-50%);
             }
-            .slide::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 0;
-                background-color: #ffffff;
-                transition: all 0.3s ease;
-            }
-            .slide:hover ,
-            .slide:focus {
-                box-shadow: inset 16em 0 0 0 #ffffff;
-                color: #000000;
+            /*.slide::before {*/
+            /*    content: "";*/
+            /*    position: absolute;*/
+            /*    top: 0;*/
+            /*    left: 0;*/
+            /*    height: 100%;*/
+            /*    width: 0;*/
+            /*    background-color: #ffffff;*/
+            /*    transition: all 0.3s ease;*/
+            /*}*/
+            /*.slide:hover ,*/
+            /*.slide:focus {*/
+            /*    box-shadow: inset 16em 0 0 0 #ffffff;*/
+            /*    color: #000000;*/
+            /*}*/
+            .logo:hover .logo-svg{
+                transform: rotateY(180deg);
             }
         </style>
     </head>
@@ -118,8 +121,8 @@
             <nav class="relative flex justify-end max-w-[70.8125rem] mx-auto">
                 <ul class="absolute top-0 left-0 w-full flex justify-between px-6 pt-9 z-20">
                     <li data-aos="fade-down" data-aos-duration="700">
-                        <a href="/" class="inline-block w-6 lg:w-8 transition-[width]">
-                            <img src="images/content/logo.png" alt="logo" class="w-full cursor-pointer">
+                        <a href="/" class="logo inline-block transform scale-[0.75] lg:scale-100 text-white transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="logo-svg transform hover: transition-transform duration-700" style="transform-style: preserve-3d;" fill="currentColor" width="32.001" height="32"><path d="M16.014 0a16 16 0 0 0-4.8.737v8.861a8 8 0 1 1-3.2 6.4V2.136a16 16 0 1 0 8-2.136Zm.2 11.2a4.8 4.8 0 1 0 4.7 4.9 4.8 4.8 0 0 0-4.7-4.9Z"/></svg>
                         </a>
                     </li>
                     <li  data-aos="fade-down" data-aos-duration="700" class="lg:translate-x-32 xl:hidden transition-transform duration-700">
@@ -450,9 +453,9 @@
         <footer class="relative mt-[5.75rem] px-6 lg:mt-[11.75rem] transition-[margin] z-30">
             <div class="flex flex-col md:flex-row md:space-x-20 lg:space-x-40 max-w-[70.8125rem] mx-auto">
                 <div class="flex-1 flex md:justify-between">
-                    <div class="hidden md:block">
-                        <a href="/" class="inline-block w-6 mt-2" data-aos="fade-right" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
-                            <img src="images/content/logo.png" alt="logo" class="w-full cursor-pointer">
+                    <div class="hidden md:block" data-aos="fade-right" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+                        <a href="/" class="logo mt-2 inline-block transform scale-[0.75] text-white transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="logo-svg transform hover: transition-transform duration-700" style="transform-style: preserve-3d;" fill="currentColor" width="32.001" height="32"><path d="M16.014 0a16 16 0 0 0-4.8.737v8.861a8 8 0 1 1-3.2 6.4V2.136a16 16 0 1 0 8-2.136Zm.2 11.2a4.8 4.8 0 1 0 4.7 4.9 4.8 4.8 0 0 0-4.7-4.9Z"/></svg>
                         </a>
                     </div>
                     <div class="mr-6 md:mr-0">
