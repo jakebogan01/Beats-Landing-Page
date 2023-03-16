@@ -1,5 +1,5 @@
 # Beats by Dre landing page
-<img src="https://raw.githubusercontent.com/jakebogan01/Portfolio/main/img/content/beats-landing-page.png">
+<img src="https://github.com/jakebogan01/2023-Portfolio/blob/main/src/img/content/projects/project-1.png?raw=true">
 
 ## Visit Site
 You can check it out here :point_right: <a href="https://jakebogan01.github.io/Beats-Landing-Page/"> SITE </a>
