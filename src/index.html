@@ -1,571 +1,712 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth max-w-full sm:max-w-none overflow-x-hidden sm:overflow-x-visible">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="theme-color" content="#ffffff">
-        <meta name="description" content="Beat headphones landing page">
-        <meta property="og:title" content="Beats Landing Page">
-        <meta property="og:type" content="Article">
-        <meta property="og:url" content="https://jakebogan.dev">
-        <meta property="og:image" content="https://raw.githubusercontent.com/jakebogan01/Beats-Landing-Page/main/src/images/fb-og-image.png">
-        <meta property="og:description" content="Beats Landing Page">
-        <meta property="og:site_name" content="Beats Landing Page">
-        <title>Beats Landing Page</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/lib/aos.css">
-        <link rel="stylesheet" href="css/lib/styles.css">
-        <link href="/dist/output.css" rel="stylesheet">
-        <style>
-            html {
-                scroll-behavior: smooth;
-            }
-            *, *::before, *::after{
-                scrollbar-width: 0px !important;
-                scrollbar-color: #2C2D2D;
-            }
-            ::-webkit-scrollbar{
-                width: 0px !important;
-                background-color: #2C2D2D;
-            }
-            ::-webkit-scrollbar-thumb{
-                border-radius: 0px;
-                background: #2C2D2D;
-                border: 0px solid #2C2D2D;
-            }
-            h1, h2, h3, h4, h5, p, span, img {
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-                cursor: default;
-            }
-            .aos-animation {
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-                overflow: hidden;
-            }
-            h1, h1 span {
-                background: -webkit-linear-gradient(#363436, #292A2B);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-            h2, h2 span {
-                background: -webkit-linear-gradient(#3B3B40, #141415);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-            .light:hover::before {
-                opacity: 1;
-            }
-            .light::before {
-                background: radial-gradient(
-                    800px circle at var(--mouse-x) var(--mouse-y),
-                    rgba(255, 255, 255, 0.06),
-                    transparent 40%
-                );
-                border-radius: inherit;
-                content: "";
-                height: 100%;
-                left: 0;
-                opacity: 0;
-                position: absolute;
-                top: 0;
-                transition: opacity 500ms;
-                width: 100%;
-                z-index: 2;
-            }
-            .nav-underline::before {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                height: 0.15rem;
-                width: 0;
-                background-color: #ffffff;
-                transition: all 0.3s ease;
-            }
-            .nav-underline:hover:before {
-                width: 100%;
-            }
-            header ul li .nav-underline:before {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            .logo:hover .logo-svg{
-                transform: rotateY(180deg);
-            }
-        </style>
-    </head>
-    <body class="relative light antialiase bg-[#0F0F10] font-poppins text-white overflow-x-hidden">
-
-        <header id="home">
-            <nav class="relative flex justify-end max-w-[70.8125rem] mx-auto">
-                <ul class="absolute top-0 left-0 w-full flex justify-between px-6 pt-9 z-20">
-                    <li data-aos="fade-down" data-aos-duration="700">
-                        <a href="index.html" class="logo inline-block transform scale-[0.75] lg:scale-100 text-white transition-transform">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="logo-svg transform hover: transition-transform duration-700" style="transform-style: preserve-3d;" fill="currentColor" width="32.001" height="32"><path d="M16.014 0a16 16 0 0 0-4.8.737v8.861a8 8 0 1 1-3.2 6.4V2.136a16 16 0 1 0 8-2.136Zm.2 11.2a4.8 4.8 0 1 0 4.7 4.9 4.8 4.8 0 0 0-4.7-4.9Z"/></svg>
-                        </a>
-                    </li>
-                    <li  data-aos="fade-down" data-aos-duration="700" class="lg:translate-x-32 xl:hidden transition-transform duration-700">
-                        <a href="#" class="opacity-100 lg:opacity-0 transition-opacity duration-700">
-                            <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 0H2C.9 0 0 .9 0 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2ZM2 16V2h6v14H2Zm14 0h-6V9h6v7Zm0-9h-6V2h6v5Z" fill="#fff"/></svg>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="hidden lg:flex relative items-center space-x-14 px-6 pt-6 z-20">
-                    <li data-aos="fade-left" data-aos-duration="700">
-                        <a href="index.html" class="nav-underline relative text-base font-bold pb-0.5">Home</a>
-                    </li>
-                    <li data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
-                        <a href="#specs" class="nav-underline relative text-base font-bold pb-0.5">Specs</a>
-                    </li>
-                    <li data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
-                        <a href="#case" class="nav-underline relative text-base font-bold pb-0.5">Case</a>
-                    </li>
-                    <li data-aos="fade-left" data-aos-duration="700" data-aos-delay="300">
-                        <a href="#products" class="nav-underline relative text-base font-bold pb-0.5">Products</a>
-                    </li>
-                    <li data-aos="fade-left" data-aos-duration="700" data-aos-delay="400">
-                        <a href="#" class="relative flex font-light text-[0.9375rem] bg-[#1E1E21] rounded-lg w-[9.75rem] h-[3.4375rem] overflow-hidden transition-all border border-transparent hover:border-[#55555E] duration-700 group" style="will-change: transform;">
-                            <span class="flex justify-center items-center h-full w-full transform group-hover:-translate-x-[0.625rem] transition-transform cursor-pointer duration-700">
-                                Shop
-                            </span>
-                            <span class="absolute top-0 -right-[2.25rem] group-hover:-right-0 h-full flex justify-center items-center px-2 bg-[#313135] transition-all cursor-pointer duration-700">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" /></svg>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <main class="relative pt-[4.375rem] z-10">
-            <section class="px-6">
-                <div class="relative flex max-w-[60.0625rem] mx-auto">
-                    <div class="w-0 lg:w-full transition-[width]">
-                        <div class="absolute top-0 -right-40 lg:left-40 transform -translate-y-[25rem] md:-translate-y-[29rem] lg:-translate-y-[8rem] -translate-x-[34vw] lg:-translate-x-[5.6875rem] w-[15.9375rem] md:w-[18.75rem] z-0 transition-[width]">
-                            <img src="images/content/header-headphone-bkg.png" role="presentation" alt="" class="lg:hidden w-full" data-aos="fade-down" data-aos-duration="700" data-aos-delay="200">
-                            <span class="block" data-aos="fade-down" data-aos-duration="700" data-aos-delay="200">
-                                <img src="images/content/header-headphone-bkg.png" role="presentation" alt="" class="hidden lg:block headphones w-full">
-                            </span>
-                        </div>
-                    </div>
-                    <div class="relative w-full">
-                        <h1 class="aos-animation text-[5rem] md:text-[7.5rem] font-semibold leading-[6rem] pl-[0.9375rem] md:pl-12 transition-text">
-                            <span data-aos="fade-up" data-aos-duration="700" class="inline-block">O</span>
-                            <span data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" class="inline-block -ml-[1.1875rem] md:-ml-[1.75rem]">n</span>
-                            &#xa0;
-                            <span data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" class="inline-block -ml-[2.3125rem] md:-ml-[3.625rem]">e</span>
-                            <span data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" class="inline-block -ml-[1.1875rem] md:-ml-[1.75rem]">a</span>
-                            <span data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" class="inline-block -ml-[1.1875rem] md:-ml-[1.75rem]">r</span>
-                        </h1>
-
-
-                        <h4 data-aos="zoom-in" data-aos-delay="300" class="text-[2.5rem] md:text-[4rem] font-semibold leading-[1.40625rem] md:mt-8 transition-text">Beats 3</h4>
-                        <p data-aos="zoom-in" data-aos-delay="350" class="text-lg md:text-xl font-semibold mt-[3.125rem] mb-5 transition-text">Overview</p>
-                        <p data-aos="zoom-in" data-aos-delay="400" class="text-sm md:text-[1rem] leading-[2rem] text-[#BDC0C2] font-light max-w-[27.375rem] sm:max-w-[22.875rem] md:max-w-[24.875rem] transition-all">Enjoy award-winning Beats sound with wireless listening freedom and a sleek, streamlined design with comfortable padded earphones, delivering first-rate playback.</p>
-
-                        <div class="mt-[3.4375rem]">
-                            <span class="inline-block" data-aos="zoom-in" data-aos-delay="450">
-                                <button type="button" class="group relative flex items-center justify-center bg-[#1E1E21] hover:bg-white hover:text-black rounded-lg w-[15.5rem] h-[3.4375rem] overflow-hidden transition-all duration-300">
-                                    <svg width="20" height="22" class="mr-4 group-hover:stroke-black transition-all duration-300" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.977 8.84A2 2 0 0 1 3.971 7H16.03a2 2 0 0 1 1.994 1.84l.803 10A2 2 0 0 1 16.833 21H3.167a2 2 0 0 1-1.993-2.16l.803-10v0Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 10V5a4 4 0 1 0-8 0v5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                    <span class="text-[0.9375rem] cursor-pointer">Add to Bag</span> <span class="ml-4 text-xl font-bold cursor-pointer">N399k</span>
-                                </button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-[4.6875rem] lg:mt-[7.6875rem] max-w-[51.625rem] mx-auto transition-[margin]">
-                    <ul class="flex items-center justify-between space-x-4">
-                        <li class="transform hover:scale-90 transition-transform duration-700">
-                            <span class="block" data-aos="fade-left" data-aos-duration="700" data-aos-offset="400">
-                                <a href="#" class="block max-w-[5.625rem] sm:max-w-[6.25rem] hover:opacity-75 transition-opacity">
-                                    <img src="images/content/apple.png" alt="apple" class="w-full cursor-pointer">
-                                </a>
-                            </span>
-                        </li>
-                        <li class="transform hover:scale-90 transition-transform duration-700">
-                            <span class="block" data-aos="fade-left" data-aos-delay="100" data-aos-duration="700" data-aos-offset="400">
-                                <a href="#" class="block max-w-[5.625rem] sm:max-w-[6.25rem] hover:opacity-75 transition-opacity">
-                                    <img src="images/content/spotify.png" alt="spotify" class="w-full cursor-pointer">
-                                </a>
-                            </span>
-                        </li>
-                        <li class="transform hover:scale-90 transition-transform duration-700">
-                            <span class="block" data-aos="fade-left" data-aos-delay="200" data-aos-duration="700" data-aos-offset="400">
-                                <a href="#" class="block max-w-[5.625rem] sm:max-w-[6.25rem] hover:opacity-75 transition-opacity">
-                                    <img src="images/content/amazon.png" alt="amazon" class="w-full cursor-pointer">
-                                </a>
-                            </span>
-                        </li>
-                        <li class="transform hover:scale-90 transition-transform duration-700">
-                            <span class="block" data-aos="fade-left" data-aos-delay="300" data-aos-duration="700" data-aos-offset="400">
-                                <a href="#" class="block max-w-[5.625rem] sm:max-w-[6.25rem] hover:opacity-75 transition-opacity">
-                                    <img src="images/content/youtube.png" alt="youtube" class="w-full cursor-pointer">
-                                </a>
-                            </span>
-                        </li>
+     <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+          <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+          <meta name="msapplication-TileColor" content="#141415" />
+          <meta name="theme-color" content="#141415" />
+          <meta name="description" content="Beat headphones landing page" />
+          <meta property="og:title" content="Beats Landing Page" />
+          <meta property="og:type" content="Article" />
+          <meta property="og:url" content="https://jakebogan.dev" />
+          <meta property="og:image" content="https://raw.githubusercontent.com/jakebogan01/Beats-Landing-Page/main/src/images/fb-og-image.png" />
+          <meta property="og:description" content="Beats Landing Page" />
+          <meta property="og:site_name" content="Beats Landing Page" />
+          <title>Beats Landing Page</title>
+          <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+          <link rel="stylesheet" href="css/lib/aos.css" />
+          <link rel="stylesheet" href="css/lib/styles.css" />
+          <link href="/dist/output.css" rel="stylesheet" />
+          <style>
+               html {
+                    scroll-behavior: smooth;
+               }
+               *,
+               *::before,
+               *::after {
+                    scrollbar-width: 0px !important;
+                    scrollbar-color: #2c2d2d;
+               }
+               ::-webkit-scrollbar {
+                    width: 0px !important;
+                    background-color: #2c2d2d;
+               }
+               ::-webkit-scrollbar-thumb {
+                    border-radius: 0px;
+                    background: #2c2d2d;
+                    border: 0px solid #2c2d2d;
+               }
+               h1,
+               h2,
+               h3,
+               h4,
+               h5,
+               p,
+               span,
+               img {
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    cursor: default;
+               }
+               .aos-animation {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                    overflow: hidden;
+               }
+               h1,
+               h1 span {
+                    background: -webkit-linear-gradient(#363436, #292a2b);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+               }
+               h2,
+               h2 span {
+                    background: -webkit-linear-gradient(#3b3b40, #141415);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+               }
+               .light:hover::before {
+                    opacity: 1;
+               }
+               .light::before {
+                    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 40%);
+                    border-radius: inherit;
+                    content: "";
+                    height: 100%;
+                    left: 0;
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    transition: opacity 500ms;
+                    width: 100%;
+                    z-index: 2;
+               }
+               .nav-underline::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 0.15rem;
+                    width: 0;
+                    background-color: #ffffff;
+                    transition: all 0.3s ease;
+               }
+               .nav-underline:hover:before {
+                    width: 100%;
+               }
+               header ul li .nav-underline:before {
+                    left: 50%;
+                    transform: translateX(-50%);
+               }
+               .logo:hover .logo-svg {
+                    transform: rotateY(180deg);
+               }
+          </style>
+     </head>
+     <body class="relative light antialiase bg-[#0F0F10] font-poppins text-white overflow-x-hidden">
+          <header id="home">
+               <nav class="relative flex justify-end max-w-[70.8125rem] mx-auto">
+                    <ul class="absolute top-0 left-0 w-full flex justify-between px-6 pt-9 z-20">
+                         <li data-aos="fade-down" data-aos-duration="700">
+                              <a href="index.html" class="logo inline-block transform scale-[0.75] lg:scale-100 text-white transition-transform">
+                                   <svg xmlns="http://www.w3.org/2000/svg" class="logo-svg transform hover: transition-transform duration-700" style="transform-style: preserve-3d" fill="currentColor" width="32.001" height="32">
+                                        <path d="M16.014 0a16 16 0 0 0-4.8.737v8.861a8 8 0 1 1-3.2 6.4V2.136a16 16 0 1 0 8-2.136Zm.2 11.2a4.8 4.8 0 1 0 4.7 4.9 4.8 4.8 0 0 0-4.7-4.9Z" />
+                                   </svg>
+                              </a>
+                         </li>
+                         <li data-aos="fade-down" data-aos-duration="700" class="lg:translate-x-32 xl:hidden transition-transform duration-700">
+                              <a href="#" class="opacity-100 lg:opacity-0 transition-opacity duration-700">
+                                   <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 0H2C.9 0 0 .9 0 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2ZM2 16V2h6v14H2Zm14 0h-6V9h6v7Zm0-9h-6V2h6v5Z" fill="#fff" />
+                                   </svg>
+                              </a>
+                         </li>
                     </ul>
-                </div>
-            </section>
+                    <ul class="hidden lg:flex relative items-center space-x-14 px-6 pt-6 z-20">
+                         <li data-aos="fade-left" data-aos-duration="700">
+                              <a href="index.html" class="nav-underline relative text-base font-bold pb-0.5">Home</a>
+                         </li>
+                         <li data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
+                              <a href="#specs" class="nav-underline relative text-base font-bold pb-0.5">Specs</a>
+                         </li>
+                         <li data-aos="fade-left" data-aos-duration="700" data-aos-delay="200">
+                              <a href="#case" class="nav-underline relative text-base font-bold pb-0.5">Case</a>
+                         </li>
+                         <li data-aos="fade-left" data-aos-duration="700" data-aos-delay="300">
+                              <a href="#products" class="nav-underline relative text-base font-bold pb-0.5">Products</a>
+                         </li>
+                         <li data-aos="fade-left" data-aos-duration="700" data-aos-delay="400">
+                              <a
+                                   href="#"
+                                   class="relative flex font-light text-[0.9375rem] bg-[#1E1E21] rounded-lg w-[9.75rem] h-[3.4375rem] overflow-hidden transition-all border border-transparent hover:border-[#55555E] duration-700 group"
+                                   style="will-change: transform">
+                                   <span class="flex justify-center items-center h-full w-full transform group-hover:-translate-x-[0.625rem] transition-transform cursor-pointer duration-700"> Shop </span>
+                                   <span class="absolute top-0 -right-[2.25rem] group-hover:-right-0 h-full flex justify-center items-center px-2 bg-[#313135] transition-all cursor-pointer duration-700">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                             <path
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                        </svg>
+                                   </span>
+                              </a>
+                         </li>
+                    </ul>
+               </nav>
+          </header>
 
-            <section id="specs" class="pl-6 mt-[5.75rem] lg:mt-[11.75rem] transition-[margin]">
-                <h2 class="aos-animation text-center text-[3.5rem] md:text-[4.5rem] transition-text">
-                    <span data-aos="fade-up" data-aos-duration="700" data-aos-offset="300" class="inline-block">S</span>
-                    <span data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">p</span>
-                    <span data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">e</span>
-                    <span data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">c</span>
-                    <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">s</span>
-                </h2>
+          <main class="relative pt-[4.375rem] z-10">
+               <section class="px-6">
+                    <div class="relative flex max-w-[60.0625rem] mx-auto">
+                         <div class="w-0 lg:w-full transition-[width]">
+                              <div
+                                   class="absolute top-0 -right-40 lg:left-40 transform -translate-y-[25rem] md:-translate-y-[29rem] lg:-translate-y-[8rem] -translate-x-[34vw] lg:-translate-x-[5.6875rem] w-[15.9375rem] md:w-[18.75rem] z-0 transition-[width]">
+                                   <img src="images/content/header-headphone-bkg.png" role="presentation" alt="" class="lg:hidden w-full" data-aos="fade-down" data-aos-duration="700" data-aos-delay="200" />
+                                   <span class="block" data-aos="fade-down" data-aos-duration="700" data-aos-delay="200">
+                                        <img src="images/content/header-headphone-bkg.png" role="presentation" alt="" class="hidden lg:block headphones w-full" />
+                                   </span>
+                              </div>
+                         </div>
+                         <div class="relative w-full">
+                              <h1 class="aos-animation text-[5rem] md:text-[7.5rem] font-semibold leading-[6rem] pl-[0.9375rem] md:pl-12 transition-text">
+                                   <span data-aos="fade-up" data-aos-duration="700" class="inline-block">O</span>
+                                   <span data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" class="inline-block -ml-[1.1875rem] md:-ml-[1.75rem]">n</span>
+                                   &#xa0;
+                                   <span data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" class="inline-block -ml-[2.3125rem] md:-ml-[3.625rem]">e</span>
+                                   <span data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" class="inline-block -ml-[1.1875rem] md:-ml-[1.75rem]">a</span>
+                                   <span data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" class="inline-block -ml-[1.1875rem] md:-ml-[1.75rem]">r</span>
+                              </h1>
 
-                <div class="flex justify-between mt-[3.875rem] max-w-[31.25rem] mx-auto">
-                    <div class="min-w-[11.25rem]">
-                        <ul class="space-y-7">
-                            <li class="pl-6 transform hover:scale-110 transition-transform duration-700">
-                                <span class="block" data-aos="zoom-in" data-aos-duration="700" data-aos-offset="300">
-                                    <span class="block"><svg width="15" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.208 6.292 12.5 10.416-6.25 5.209V1.083l6.25 5.209-12.5 10.416" stroke="#F8F8F8" stroke-width="2.083" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                                    <span class="block text-base font-semibold">Connection</span>
-                                    <span class="block text-xs text-[#BDC0C2] font-light">Bluetooth v5.2</span>
-                                </span>
-                            </li>
-                            <li class="transform hover:scale-110 transition-transform duration-700">
-                                <span class="block" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="700" data-aos-offset="300">
-                                    <span class="block"><svg width="23" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.75 1.25H3.166c-1.15 0-2.083.933-2.083 2.083v8.334c0 1.15.933 2.083 2.083 2.083H17.75c1.15 0 2.083-.933 2.083-2.083V3.333c0-1.15-.933-2.083-2.083-2.083Z" stroke="#F8F8F8" stroke-width="2.083" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.875 4.375 8.375 7.5h4.167l-2.5 3.125m9.791-5.208h1.563a.52.52 0 0 1 .52.52v3.125a.52.52 0 0 1-.52.521h-1.563V5.417Z" stroke="#F8F8F8" stroke-width="2.083" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                                    <span class="block text-base font-semibold">Battery</span>
-                                    <span class="block text-xs text-[#BDC0C2] font-light">Duration 40h</span>
-                                </span>
-                            </li>
-                            <li class="transform hover:scale-110 transition-transform duration-700">
-                                <span class="block" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300">
-                                    <span class="block"><svg width="13" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.188 5.25h-.782V.562H8.844V5.25H4.156V.562H2.594V5.25h-.781A1.562 1.562 0 0 0 .25 6.813V11.5a6.255 6.255 0 0 0 5.469 6.195v4.742H7.28v-4.742A6.256 6.256 0 0 0 12.75 11.5V6.812a1.563 1.563 0 0 0-1.563-1.562Zm0 6.25a4.688 4.688 0 0 1-9.376 0V6.812h9.376V11.5Z" fill="#F8F8F8"/></svg></span>
-                                    <span class="block text-base font-semibold">Load</span>
-                                    <span class="block text-xs text-[#BDC0C2] font-light">Fast charge 4.2-AAC</span>
-                                </span>
-                            </li>
-                            <li class="pl-6 transform hover:scale-110 transition-transform duration-700">
-                                <span class="block" data-aos="zoom-in" data-aos-delay="150" data-aos-duration="700" data-aos-offset="300">
-                                    <span class="block"><svg width="17" height="25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.469 10.156a.781.781 0 0 1 .781.781V12.5a6.25 6.25 0 0 0 12.5 0v-1.563a.781.781 0 1 1 1.563 0V12.5a7.812 7.812 0 0 1-7.032 7.773v3.165h4.688a.781.781 0 1 1 0 1.562H3.03a.781.781 0 1 1 0-1.563H7.72v-3.164A7.812 7.812 0 0 1 .687 12.5v-1.563a.781.781 0 0 1 .782-.78Z" fill="#F8F8F8"/><path d="M11.625 12.5a3.125 3.125 0 1 1-6.25 0V4.687a3.125 3.125 0 0 1 6.25 0V12.5ZM8.5 0a4.687 4.687 0 0 0-4.688 4.688V12.5a4.688 4.688 0 0 0 9.376 0V4.687A4.688 4.688 0 0 0 8.5 0Z" fill="#F8F8F8"/></svg></span>
-                                    <span class="block text-base font-semibold">Microphone</span>
-                                    <span class="block text-xs text-[#BDC0C2] font-light">Supports Apple Siri</span>
-                                    <span class="block text-xs text-[#BDC0C2] font-light">and Google</span>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="flex items-center">
-                        <div class="max-w-[15.625rem] md:max-w-[18.75rem] transform translate-x-8 mb-5 transition-[max-width]">
-                            <span class="block" data-aos="zoom-in-left" data-aos-delay="200" data-aos-duration="700" data-aos-offset="300">
-                                <img src="images/content/specs-headphones-bkg.png" alt="black headphones" class="images1 w-full">
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                              <h4 data-aos="zoom-in" data-aos-delay="300" class="text-[2.5rem] md:text-[4rem] font-semibold leading-[1.40625rem] md:mt-8 transition-text">Beats 3</h4>
+                              <p data-aos="zoom-in" data-aos-delay="350" class="text-lg md:text-xl font-semibold mt-[3.125rem] mb-5 transition-text">Overview</p>
+                              <p data-aos="zoom-in" data-aos-delay="400" class="text-sm md:text-[1rem] leading-[2rem] text-[#BDC0C2] font-light max-w-[27.375rem] sm:max-w-[22.875rem] md:max-w-[24.875rem] transition-all">
+                                   Enjoy award-winning Beats sound with wireless listening freedom and a sleek, streamlined design with comfortable padded earphones, delivering first-rate playback.
+                              </p>
 
-            <section id="case" class="mt-[5.75rem] lg:mt-[11.75rem] transition-[margin]">
-                <h2 class="aos-animation text-center text-[3.5rem] md:text-[4.5rem] transition-text">
-                    <span data-aos="fade-up" data-aos-duration="700" data-aos-offset="300" class="inline-block">C</span>
-                    <span data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">a</span>
-                    <span data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">s</span>
-                    <span data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">e</span>
-                </h2>
-
-                <div class="flex justify-between mt-[3.875rem] max-w-[32.4375rem] md:max-w-[37.25rem] mx-auto">
-                    <div class="flex items-center min-w-[8.125rem]">
-                        <div class="max-w-[15.625rem] md:max-w-[18.75rem] -translate-x-12 transition-[max-width]">
-                            <span class="block" data-aos="zoom-in-right" data-aos-duration="700" data-aos-offset="300">
-                                <img src="images/content/case-headphone-case-bkg.png" alt="headphone case" class="case-headphones w-full">
-                            </span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col justify-end md:justify-center pr-6 min-w-[14.5rem] w-[14.5rem] md:min-w-[16.5rem] md:w-[16.5rem]">
-                        <p data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" data-aos-offset="300" class="text-[#BDC0C2] text-[0.9375rem] md:text-[1rem] leading-[2rem] font-light transition-text">With a comfortable and adaptable case so that you can store it whenever you want, and keep your durability forever.</p>
-                        <div class="mt-[3.4375rem]">
-                            <span class="inline-block" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300">
-                                <button type="button" class="group flex items-center justify-center bg-[#1E1E21] hover:bg-white rounded-lg w-[9.75rem] h-[3.4375rem] overflow-hidden transition-colors duration-300">
-                                    <svg width="23" height="23" class="group-hover:stroke-black transition-colors duration-300" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 21.917c5.753 0 10.416-4.664 10.416-10.417S17.253 1.083 11.5 1.083 1.083 5.747 1.083 11.5 5.747 21.917 11.5 21.917Z" stroke-width="2.083"/><path d="M11.5 6.292v6.25m0 3.646v.52" stroke-width="2.083" stroke-linecap="round"/></svg>
-                                    <span class="ml-4 cursor-pointer group-hover:text-black transition-colors duration-300">More info</span>
-                                </button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="relative mt-[5.75rem] px-6 lg:mt-[11.75rem] transition-[margin]">
-                <div data-aos="zoom-in" data-aos-duration="700" data-aos-offset="300">
-                    <div class="flex items-center justify-between bg-[#181A1B] rounded-xl px-6 948:px-[9.125rem] py-[2.1875rem] 948:py-[3.125rem] max-w-[60.5rem] mx-auto transition-[padding] group">
-                        <div class="relative z-10">
-                            <h3 class="text-[1.125rem] md:text-[1.5rem] leading-[1.8125rem] sm:leading-[2.8125rem] font-semibold text-[#BDC0C2] group-hover:text-white transition-text transition-all"><span class="inline-block md:group-hover:-translate-y-8 transition-transform duration-700 ease-in-out">Immerse yourself in</span> <br><span class="inline-block md:group-hover:-translate-y-8 transition-transform duration-700 ease-in-out delay-100">your music</span></h3>
-                            <p class="text-sm md:text-base font-light text-[#BDC0C2] my-3 transition-text">Buy Now, up to 40% off.</p>
-                            <div>
-                                <button data-aos="zoom-in" data-aos-delay="50" data-aos-duration="700" data-aos-offset="300" type="button" class="flex items-center justify-center bg-black group-hover:bg-white rounded-lg w-[9.25rem] h-[3.4375rem] transition-all duration-700">
-                                    <svg width="20" height="22" class="mr-4 group-hover:stroke-black transition-all duration-700" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.977 8.84A2 2 0 0 1 3.971 7H16.03a2 2 0 0 1 1.994 1.84l.803 10A2 2 0 0 1 16.833 21H3.167a2 2 0 0 1-1.993-2.16l.803-10v0Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 10V5a4 4 0 1 0-8 0v5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                    <span class="text-[0.9375rem] group-hover:text-black cursor-pointer transition-colors duration-700">Buy now</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="absolute 593:static -bottom-[2.9375rem] -right-[9.0625rem] w-[18.75rem] md:w-[21.875rem] z-0 transition-[width]">
-                                <span class="block" data-aos="zoom-in-left" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300">
-                                    <img src="images/content/sale-headphones-collapse-bkg.png" alt="collapsed headphones" class="images1 w-full">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="products" class="mt-[5.75rem] px-3 lg:mt-[11.75rem] transition-[margin]">
-                <h2 class="aos-animation text-center text-[3.5rem] md:text-[4.5rem] transition-text">
-                    <span>
-                        <span data-aos="fade-up" data-aos-duration="700" data-aos-offset="300" class="inline-block">C</span>
-                        <span data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">h</span>
-                        <span data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">o</span>
-                        <span data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">o</span>
-                        <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">s</span>
-                        <span data-aos="fade-up" data-aos-delay="250" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">e</span>
-                    </span><br>
-                    <span>
-                        <span data-aos="fade-up" data-aos-duration="700" data-aos-offset="300" class="inline-block">Y</span>
-                        <span data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">o</span>
-                        <span data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">u</span>
-                        <span data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">r</span>
-
-                        <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">S</span>
-                        <span data-aos="fade-up" data-aos-delay="250" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">t</span>
-                        <span data-aos="fade-up" data-aos-delay="300" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">y</span>
-                        <span data-aos="fade-up" data-aos-delay="350" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">l</span>
-                        <span data-aos="fade-up" data-aos-delay="400" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">e</span>
-                    </span>
-                </h2>
-
-                <div class="flex flex-wrap justify-between mx-auto max-w-[23.25rem] lg:max-w-[35.25rem] mt-2.5 lg:mt-[2.625rem] transition-[max-width]">
-
-                    <div data-aos="zoom-in-up" data-aos-duration="700" data-aos-offset="300" class="flex flex-col justify-end bg-[#181A1B] px-2 py-2 rounded-lg h-[9.5rem] w-[10.125rem] mt-[6.25rem] group">
-                        <div class="flex justify-center">
-                            <div class="w-[5.9375rem] mb-6 group-hover:-translate-y-10 transform transition-transform duration-1000">
-                                <img src="images/content/headphone-1.png" alt="headphone" class="images2 w-full">
-                            </div>
-                        </div>
-                        <div class="flex justify-between">
-                            <div class="flex flex-col">
-                                <span class="block text-sm font-semibold">Black</span>
-                                <span class="block text-sm font-semibold text-[#BDC0C2]">N299K</span>
-                            </div>
-                            <div class="flex items-end">
-                                <button type="button" class="flex justify-center items-center bg-[#0A0A0B] group-hover:bg-white rounded-lg h-[2.1875rem] w-[2.1875rem] transition-colors duration-1000">
-                                    <svg width="16" height="18" class="group-hover:stroke-black transition-all duration-1000" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.983 7.38A1.5 1.5 0 0 1 3.479 6h9.043a1.5 1.5 0 0 1 1.495 1.38l.603 7.5a1.501 1.501 0 0 1-1.495 1.62H2.875a1.5 1.5 0 0 1-1.494-1.62l.602-7.5v0Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 8.25V4.5a3 3 0 0 0-6 0v3.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </button>
-                            </div>
-                        </div>
+                              <div class="mt-[3.4375rem]">
+                                   <span class="inline-block" data-aos="zoom-in" data-aos-delay="450">
+                                        <button type="button" class="group relative flex items-center justify-center bg-[#1E1E21] hover:bg-white hover:text-black rounded-lg w-[15.5rem] h-[3.4375rem] overflow-hidden transition-all duration-300">
+                                             <svg width="20" height="22" class="mr-4 group-hover:stroke-black transition-all duration-300" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M1.977 8.84A2 2 0 0 1 3.971 7H16.03a2 2 0 0 1 1.994 1.84l.803 10A2 2 0 0 1 16.833 21H3.167a2 2 0 0 1-1.993-2.16l.803-10v0Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                  <path d="M14 10V5a4 4 0 1 0-8 0v5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                             </svg>
+                                             <span class="text-[0.9375rem] cursor-pointer">Add to Bag</span> <span class="ml-4 text-xl font-bold cursor-pointer">N399k</span>
+                                        </button>
+                                   </span>
+                              </div>
+                         </div>
                     </div>
 
-                    <div data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300" class="flex flex-col justify-end bg-[#181A1B] px-2 py-2 rounded-lg h-[9.5rem] w-[10.125rem] mt-[6.25rem] group">
-                        <div class="flex justify-center">
-                            <div class="w-[5.9375rem] mb-6 group-hover:-translate-y-10 transform transition-transform duration-1000">
-                                <img src="images/content/headphone-2.png" alt="headphone" class="images2 w-full">
-                            </div>
-                        </div>
-                        <div class="flex justify-between">
-                            <div class="flex flex-col">
-                                <span class="block text-sm font-semibold">Red Black</span>
-                                <span class="block text-sm font-semibold text-[#BDC0C2]">N299K</span>
-                            </div>
-                            <div class="flex items-end">
-                                <button type="button" class="flex justify-center items-center bg-[#0A0A0B] group-hover:bg-white rounded-lg h-[2.1875rem] w-[2.1875rem] transition-colors duration-1000">
-                                    <svg width="16" height="18" class="group-hover:stroke-black transition-all duration-1000" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.983 7.38A1.5 1.5 0 0 1 3.479 6h9.043a1.5 1.5 0 0 1 1.495 1.38l.603 7.5a1.501 1.501 0 0 1-1.495 1.62H2.875a1.5 1.5 0 0 1-1.494-1.62l.602-7.5v0Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 8.25V4.5a3 3 0 0 0-6 0v3.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </button>
-                            </div>
-                        </div>
+                    <div class="mt-[4.6875rem] lg:mt-[7.6875rem] max-w-[51.625rem] mx-auto transition-[margin]">
+                         <ul class="flex items-center justify-between space-x-4">
+                              <li class="transform hover:scale-90 transition-transform duration-700">
+                                   <span class="block" data-aos="fade-left" data-aos-duration="700" data-aos-offset="400">
+                                        <a href="#" class="block max-w-[5.625rem] sm:max-w-[6.25rem] hover:opacity-75 transition-opacity">
+                                             <img src="images/content/apple.png" alt="apple" class="w-full cursor-pointer" />
+                                        </a>
+                                   </span>
+                              </li>
+                              <li class="transform hover:scale-90 transition-transform duration-700">
+                                   <span class="block" data-aos="fade-left" data-aos-delay="100" data-aos-duration="700" data-aos-offset="400">
+                                        <a href="#" class="block max-w-[5.625rem] sm:max-w-[6.25rem] hover:opacity-75 transition-opacity">
+                                             <img src="images/content/spotify.png" alt="spotify" class="w-full cursor-pointer" />
+                                        </a>
+                                   </span>
+                              </li>
+                              <li class="transform hover:scale-90 transition-transform duration-700">
+                                   <span class="block" data-aos="fade-left" data-aos-delay="200" data-aos-duration="700" data-aos-offset="400">
+                                        <a href="#" class="block max-w-[5.625rem] sm:max-w-[6.25rem] hover:opacity-75 transition-opacity">
+                                             <img src="images/content/amazon.png" alt="amazon" class="w-full cursor-pointer" />
+                                        </a>
+                                   </span>
+                              </li>
+                              <li class="transform hover:scale-90 transition-transform duration-700">
+                                   <span class="block" data-aos="fade-left" data-aos-delay="300" data-aos-duration="700" data-aos-offset="400">
+                                        <a href="#" class="block max-w-[5.625rem] sm:max-w-[6.25rem] hover:opacity-75 transition-opacity">
+                                             <img src="images/content/youtube.png" alt="youtube" class="w-full cursor-pointer" />
+                                        </a>
+                                   </span>
+                              </li>
+                         </ul>
                     </div>
+               </section>
 
-                    <div data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="700" data-aos-offset="300" class="flex flex-col justify-end bg-[#181A1B] px-2 py-2 rounded-lg h-[9.5rem] w-[10.125rem] mt-[6.25rem] group">
-                        <div class="flex justify-center">
-                            <div class="w-[5.9375rem] mb-6 group-hover:-translate-y-10 transform transition-transform duration-1000">
-                                <img src="images/content/headphone-3.png" alt="headphone" class="images2 w-full">
-                            </div>
-                        </div>
-                        <div class="flex justify-between">
-                            <div class="flex flex-col">
-                                <span class="block text-sm font-semibold">Blue</span>
-                                <span class="block text-sm font-semibold text-[#BDC0C2]">N299K</span>
-                            </div>
-                            <div class="flex items-end">
-                                <button type="button" class="flex justify-center items-center bg-[#0A0A0B] group-hover:bg-white rounded-lg h-[2.1875rem] w-[2.1875rem] transition-colors duration-1000">
-                                    <svg width="16" height="18" class="group-hover:stroke-black transition-all duration-1000" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.983 7.38A1.5 1.5 0 0 1 3.479 6h9.043a1.5 1.5 0 0 1 1.495 1.38l.603 7.5a1.501 1.501 0 0 1-1.495 1.62H2.875a1.5 1.5 0 0 1-1.494-1.62l.602-7.5v0Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 8.25V4.5a3 3 0 0 0-6 0v3.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </button>
-                            </div>
-                        </div>
+               <section id="specs" class="pl-6 mt-[5.75rem] lg:mt-[11.75rem] transition-[margin]">
+                    <h2 class="aos-animation text-center text-[3.5rem] md:text-[4.5rem] transition-text">
+                         <span data-aos="fade-up" data-aos-duration="700" data-aos-offset="300" class="inline-block">S</span>
+                         <span data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">p</span>
+                         <span data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">e</span>
+                         <span data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">c</span>
+                         <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">s</span>
+                    </h2>
+
+                    <div class="flex justify-between mt-[3.875rem] max-w-[31.25rem] mx-auto">
+                         <div class="min-w-[11.25rem]">
+                              <ul class="space-y-7">
+                                   <li class="pl-6 transform hover:scale-110 transition-transform duration-700">
+                                        <span class="block" data-aos="zoom-in" data-aos-duration="700" data-aos-offset="300">
+                                             <span class="block"
+                                                  ><svg width="15" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                       <path d="m1.208 6.292 12.5 10.416-6.25 5.209V1.083l6.25 5.209-12.5 10.416" stroke="#F8F8F8" stroke-width="2.083" stroke-linecap="round" stroke-linejoin="round" /></svg
+                                             ></span>
+                                             <span class="block text-base font-semibold">Connection</span>
+                                             <span class="block text-xs text-[#BDC0C2] font-light">Bluetooth v5.2</span>
+                                        </span>
+                                   </li>
+                                   <li class="transform hover:scale-110 transition-transform duration-700">
+                                        <span class="block" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="700" data-aos-offset="300">
+                                             <span class="block"
+                                                  ><svg width="23" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                       <path
+                                                            d="M17.75 1.25H3.166c-1.15 0-2.083.933-2.083 2.083v8.334c0 1.15.933 2.083 2.083 2.083H17.75c1.15 0 2.083-.933 2.083-2.083V3.333c0-1.15-.933-2.083-2.083-2.083Z"
+                                                            stroke="#F8F8F8"
+                                                            stroke-width="2.083"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                       <path
+                                                            d="M10.875 4.375 8.375 7.5h4.167l-2.5 3.125m9.791-5.208h1.563a.52.52 0 0 1 .52.52v3.125a.52.52 0 0 1-.52.521h-1.563V5.417Z"
+                                                            stroke="#F8F8F8"
+                                                            stroke-width="2.083"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round" /></svg
+                                             ></span>
+                                             <span class="block text-base font-semibold">Battery</span>
+                                             <span class="block text-xs text-[#BDC0C2] font-light">Duration 40h</span>
+                                        </span>
+                                   </li>
+                                   <li class="transform hover:scale-110 transition-transform duration-700">
+                                        <span class="block" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300">
+                                             <span class="block"
+                                                  ><svg width="13" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                       <path
+                                                            d="M11.188 5.25h-.782V.562H8.844V5.25H4.156V.562H2.594V5.25h-.781A1.562 1.562 0 0 0 .25 6.813V11.5a6.255 6.255 0 0 0 5.469 6.195v4.742H7.28v-4.742A6.256 6.256 0 0 0 12.75 11.5V6.812a1.563 1.563 0 0 0-1.563-1.562Zm0 6.25a4.688 4.688 0 0 1-9.376 0V6.812h9.376V11.5Z"
+                                                            fill="#F8F8F8" /></svg
+                                             ></span>
+                                             <span class="block text-base font-semibold">Load</span>
+                                             <span class="block text-xs text-[#BDC0C2] font-light">Fast charge 4.2-AAC</span>
+                                        </span>
+                                   </li>
+                                   <li class="pl-6 transform hover:scale-110 transition-transform duration-700">
+                                        <span class="block" data-aos="zoom-in" data-aos-delay="150" data-aos-duration="700" data-aos-offset="300">
+                                             <span class="block"
+                                                  ><svg width="17" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                       <path
+                                                            d="M1.469 10.156a.781.781 0 0 1 .781.781V12.5a6.25 6.25 0 0 0 12.5 0v-1.563a.781.781 0 1 1 1.563 0V12.5a7.812 7.812 0 0 1-7.032 7.773v3.165h4.688a.781.781 0 1 1 0 1.562H3.03a.781.781 0 1 1 0-1.563H7.72v-3.164A7.812 7.812 0 0 1 .687 12.5v-1.563a.781.781 0 0 1 .782-.78Z"
+                                                            fill="#F8F8F8" />
+                                                       <path
+                                                            d="M11.625 12.5a3.125 3.125 0 1 1-6.25 0V4.687a3.125 3.125 0 0 1 6.25 0V12.5ZM8.5 0a4.687 4.687 0 0 0-4.688 4.688V12.5a4.688 4.688 0 0 0 9.376 0V4.687A4.688 4.688 0 0 0 8.5 0Z"
+                                                            fill="#F8F8F8" /></svg
+                                             ></span>
+                                             <span class="block text-base font-semibold">Microphone</span>
+                                             <span class="block text-xs text-[#BDC0C2] font-light">Supports Apple Siri</span>
+                                             <span class="block text-xs text-[#BDC0C2] font-light">and Google</span>
+                                        </span>
+                                   </li>
+                              </ul>
+                         </div>
+                         <div class="flex items-center">
+                              <div class="max-w-[15.625rem] md:max-w-[18.75rem] transform translate-x-8 mb-5 transition-[max-width]">
+                                   <span class="block" data-aos="zoom-in-left" data-aos-delay="200" data-aos-duration="700" data-aos-offset="300">
+                                        <img src="images/content/specs-headphones-bkg.png" alt="black headphones" class="images1 w-full" />
+                                   </span>
+                              </div>
+                         </div>
                     </div>
+               </section>
 
-                    <div data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="700" data-aos-offset="300" class="flex flex-col justify-end bg-[#181A1B] px-2 py-2 rounded-lg h-[9.5rem] w-[10.125rem] mt-[6.25rem] group">
-                        <div class="flex justify-center">
-                            <div class="w-[5.9375rem] mb-6 group-hover:-translate-y-10 transform transition-transform duration-1000">
-                                <img src="images/content/headphone-4.png" alt="headphone" class="images2 w-full">
-                            </div>
-                        </div>
-                        <div class="flex justify-between">
-                            <div class="flex flex-col">
-                                <span class="block text-sm font-semibold">Twilight Grey</span>
-                                <span class="block text-sm font-semibold text-[#BDC0C2]">N299K</span>
-                            </div>
-                            <div class="flex items-end">
-                                <button type="button" class="flex justify-center items-center bg-[#0A0A0B] group-hover:bg-white rounded-lg h-[2.1875rem] w-[2.1875rem] transition-colors duration-1000">
-                                    <svg width="16" height="18" class="group-hover:stroke-black transition-all duration-1000" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.983 7.38A1.5 1.5 0 0 1 3.479 6h9.043a1.5 1.5 0 0 1 1.495 1.38l.603 7.5a1.501 1.501 0 0 1-1.495 1.62H2.875a1.5 1.5 0 0 1-1.494-1.62l.602-7.5v0Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 8.25V4.5a3 3 0 0 0-6 0v3.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </button>
-                            </div>
-                        </div>
+               <section id="case" class="mt-[5.75rem] lg:mt-[11.75rem] transition-[margin]">
+                    <h2 class="aos-animation text-center text-[3.5rem] md:text-[4.5rem] transition-text">
+                         <span data-aos="fade-up" data-aos-duration="700" data-aos-offset="300" class="inline-block">C</span>
+                         <span data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">a</span>
+                         <span data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">s</span>
+                         <span data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">e</span>
+                    </h2>
+
+                    <div class="flex justify-between mt-[3.875rem] max-w-[32.4375rem] md:max-w-[37.25rem] mx-auto">
+                         <div class="flex items-center min-w-[8.125rem]">
+                              <div class="max-w-[15.625rem] md:max-w-[18.75rem] -translate-x-12 transition-[max-width]">
+                                   <span class="block" data-aos="zoom-in-right" data-aos-duration="700" data-aos-offset="300">
+                                        <img src="images/content/case-headphone-case-bkg.png" alt="headphone case" class="case-headphones w-full" />
+                                   </span>
+                              </div>
+                         </div>
+                         <div class="flex flex-col justify-end md:justify-center pr-6 min-w-[14.5rem] w-[14.5rem] md:min-w-[16.5rem] md:w-[16.5rem]">
+                              <p data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" data-aos-offset="300" class="text-[#BDC0C2] text-[0.9375rem] md:text-[1rem] leading-[2rem] font-light transition-text">
+                                   With a comfortable and adaptable case so that you can store it whenever you want, and keep your durability forever.
+                              </p>
+                              <div class="mt-[3.4375rem]">
+                                   <span class="inline-block" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300">
+                                        <button type="button" class="group flex items-center justify-center bg-[#1E1E21] hover:bg-white rounded-lg w-[9.75rem] h-[3.4375rem] overflow-hidden transition-colors duration-300">
+                                             <svg width="23" height="23" class="group-hover:stroke-black transition-colors duration-300" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M11.5 21.917c5.753 0 10.416-4.664 10.416-10.417S17.253 1.083 11.5 1.083 1.083 5.747 1.083 11.5 5.747 21.917 11.5 21.917Z" stroke-width="2.083" />
+                                                  <path d="M11.5 6.292v6.25m0 3.646v.52" stroke-width="2.083" stroke-linecap="round" />
+                                             </svg>
+                                             <span class="ml-4 cursor-pointer group-hover:text-black transition-colors duration-300">More info</span>
+                                        </button>
+                                   </span>
+                              </div>
+                         </div>
                     </div>
+               </section>
 
-                    <div data-aos="zoom-in-up" data-aos-delay="400" data-aos-duration="700" data-aos-offset="300" class="flex flex-col justify-end bg-[#181A1B] px-2 py-2 rounded-lg h-[9.5rem] w-[10.125rem] mt-[6.25rem] group">
-                        <div class="flex justify-center">
-                            <div class="w-[5.9375rem] mb-6 group-hover:-translate-y-10 transform transition-transform duration-1000">
-                                <img src="images/content/headphone-5.png" alt="headphone" class="images2 w-full">
-                            </div>
-                        </div>
-                        <div class="flex justify-between">
-                            <div class="flex flex-col">
-                                <span class="block text-sm font-semibold">Night Black</span>
-                                <span class="block text-sm font-semibold text-[#BDC0C2]">N299K</span>
-                            </div>
-                            <div class="flex items-end">
-                                <button type="button" class="flex justify-center items-center bg-[#0A0A0B] group-hover:bg-white rounded-lg h-[2.1875rem] w-[2.1875rem] transition-colors duration-1000">
-                                    <svg width="16" height="18" class="group-hover:stroke-black transition-all duration-1000" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.983 7.38A1.5 1.5 0 0 1 3.479 6h9.043a1.5 1.5 0 0 1 1.495 1.38l.603 7.5a1.501 1.501 0 0 1-1.495 1.62H2.875a1.5 1.5 0 0 1-1.494-1.62l.602-7.5v0Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 8.25V4.5a3 3 0 0 0-6 0v3.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </button>
-                            </div>
-                        </div>
+               <section class="relative mt-[5.75rem] px-6 lg:mt-[11.75rem] transition-[margin]">
+                    <div data-aos="zoom-in" data-aos-duration="700" data-aos-offset="300">
+                         <div class="flex items-center justify-between bg-[#181A1B] rounded-xl px-6 948:px-[9.125rem] py-[2.1875rem] 948:py-[3.125rem] max-w-[60.5rem] mx-auto transition-[padding] group">
+                              <div class="relative z-10">
+                                   <h3 class="text-[1.125rem] md:text-[1.5rem] leading-[1.8125rem] sm:leading-[2.8125rem] font-semibold text-[#BDC0C2] group-hover:text-white transition-text transition-all">
+                                        <span class="inline-block md:group-hover:-translate-y-8 transition-transform duration-700 ease-in-out">Immerse yourself in</span> <br /><span
+                                             class="inline-block md:group-hover:-translate-y-8 transition-transform duration-700 ease-in-out delay-100"
+                                             >your music</span
+                                        >
+                                   </h3>
+                                   <p class="text-sm md:text-base font-light text-[#BDC0C2] my-3 transition-text">Buy Now, up to 40% off.</p>
+                                   <div>
+                                        <button
+                                             data-aos="zoom-in"
+                                             data-aos-delay="50"
+                                             data-aos-duration="700"
+                                             data-aos-offset="300"
+                                             type="button"
+                                             class="flex items-center justify-center bg-black group-hover:bg-white rounded-lg w-[9.25rem] h-[3.4375rem] transition-all duration-700">
+                                             <svg width="20" height="22" class="mr-4 group-hover:stroke-black transition-all duration-700" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M1.977 8.84A2 2 0 0 1 3.971 7H16.03a2 2 0 0 1 1.994 1.84l.803 10A2 2 0 0 1 16.833 21H3.167a2 2 0 0 1-1.993-2.16l.803-10v0Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                  <path d="M14 10V5a4 4 0 1 0-8 0v5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                             </svg>
+                                             <span class="text-[0.9375rem] group-hover:text-black cursor-pointer transition-colors duration-700">Buy now</span>
+                                        </button>
+                                   </div>
+                              </div>
+                              <div>
+                                   <div class="absolute 593:static -bottom-[2.9375rem] -right-[9.0625rem] w-[18.75rem] md:w-[21.875rem] z-0 transition-[width]">
+                                        <span class="block" data-aos="zoom-in-left" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300">
+                                             <img src="images/content/sale-headphones-collapse-bkg.png" alt="collapsed headphones" class="images1 w-full" />
+                                        </span>
+                                   </div>
+                              </div>
+                         </div>
                     </div>
+               </section>
 
-                    <div class="h-[9.5rem] w-[10.125rem] mt-[6.25rem]"></div>
+               <section id="products" class="mt-[5.75rem] px-3 lg:mt-[11.75rem] transition-[margin]">
+                    <h2 class="aos-animation text-center text-[3.5rem] md:text-[4.5rem] transition-text">
+                         <span>
+                              <span data-aos="fade-up" data-aos-duration="700" data-aos-offset="300" class="inline-block">C</span>
+                              <span data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">h</span>
+                              <span data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">o</span>
+                              <span data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">o</span>
+                              <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">s</span>
+                              <span data-aos="fade-up" data-aos-delay="250" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">e</span> </span
+                         ><br />
+                         <span>
+                              <span data-aos="fade-up" data-aos-duration="700" data-aos-offset="300" class="inline-block">Y</span>
+                              <span data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">o</span>
+                              <span data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">u</span>
+                              <span data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">r</span>
 
-                </div>
-            </section>
-        </main>
+                              <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">S</span>
+                              <span data-aos="fade-up" data-aos-delay="250" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">t</span>
+                              <span data-aos="fade-up" data-aos-delay="300" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">y</span>
+                              <span data-aos="fade-up" data-aos-delay="350" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">l</span>
+                              <span data-aos="fade-up" data-aos-delay="400" data-aos-duration="700" data-aos-offset="300" class="inline-block -ml-2">e</span>
+                         </span>
+                    </h2>
 
-        <footer class="relative mt-[5.75rem] px-6 lg:mt-[11.75rem] transition-[margin] z-30">
-            <div class="flex flex-col md:flex-row md:space-x-20 lg:space-x-40 max-w-[70.8125rem] mx-auto">
-                <div class="flex-1 flex md:justify-between">
-                    <div class="hidden md:block" data-aos="fade-right" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
-                        <a href="index.html" class="logo mt-2 inline-block transform scale-[0.75] text-white transition-transform">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="logo-svg transform hover: transition-transform duration-700" style="transform-style: preserve-3d;" fill="currentColor" width="32.001" height="32"><path d="M16.014 0a16 16 0 0 0-4.8.737v8.861a8 8 0 1 1-3.2 6.4V2.136a16 16 0 1 0 8-2.136Zm.2 11.2a4.8 4.8 0 1 0 4.7 4.9 4.8 4.8 0 0 0-4.7-4.9Z"/></svg>
-                        </a>
+                    <div class="flex flex-wrap justify-between mx-auto max-w-[23.25rem] lg:max-w-[35.25rem] mt-2.5 lg:mt-[2.625rem] transition-[max-width]">
+                         <div data-aos="zoom-in-up" data-aos-duration="700" data-aos-offset="300" class="flex flex-col justify-end bg-[#181A1B] px-2 py-2 rounded-lg h-[9.5rem] w-[10.125rem] mt-[6.25rem] group">
+                              <div class="flex justify-center">
+                                   <div class="w-[5.9375rem] mb-6 group-hover:-translate-y-10 transform transition-transform duration-1000">
+                                        <img src="images/content/headphone-1.png" alt="headphone" class="images2 w-full" />
+                                   </div>
+                              </div>
+                              <div class="flex justify-between">
+                                   <div class="flex flex-col">
+                                        <span class="block text-sm font-semibold">Black</span>
+                                        <span class="block text-sm font-semibold text-[#BDC0C2]">N299K</span>
+                                   </div>
+                                   <div class="flex items-end">
+                                        <button type="button" class="flex justify-center items-center bg-[#0A0A0B] group-hover:bg-white rounded-lg h-[2.1875rem] w-[2.1875rem] transition-colors duration-1000">
+                                             <svg width="16" height="18" class="group-hover:stroke-black transition-all duration-1000" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path
+                                                       d="M1.983 7.38A1.5 1.5 0 0 1 3.479 6h9.043a1.5 1.5 0 0 1 1.495 1.38l.603 7.5a1.501 1.501 0 0 1-1.495 1.62H2.875a1.5 1.5 0 0 1-1.494-1.62l.602-7.5v0Z"
+                                                       stroke-width="2"
+                                                       stroke-linecap="round"
+                                                       stroke-linejoin="round" />
+                                                  <path d="M11 8.25V4.5a3 3 0 0 0-6 0v3.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                             </svg>
+                                        </button>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="700" data-aos-offset="300" class="flex flex-col justify-end bg-[#181A1B] px-2 py-2 rounded-lg h-[9.5rem] w-[10.125rem] mt-[6.25rem] group">
+                              <div class="flex justify-center">
+                                   <div class="w-[5.9375rem] mb-6 group-hover:-translate-y-10 transform transition-transform duration-1000">
+                                        <img src="images/content/headphone-2.png" alt="headphone" class="images2 w-full" />
+                                   </div>
+                              </div>
+                              <div class="flex justify-between">
+                                   <div class="flex flex-col">
+                                        <span class="block text-sm font-semibold">Red Black</span>
+                                        <span class="block text-sm font-semibold text-[#BDC0C2]">N299K</span>
+                                   </div>
+                                   <div class="flex items-end">
+                                        <button type="button" class="flex justify-center items-center bg-[#0A0A0B] group-hover:bg-white rounded-lg h-[2.1875rem] w-[2.1875rem] transition-colors duration-1000">
+                                             <svg width="16" height="18" class="group-hover:stroke-black transition-all duration-1000" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path
+                                                       d="M1.983 7.38A1.5 1.5 0 0 1 3.479 6h9.043a1.5 1.5 0 0 1 1.495 1.38l.603 7.5a1.501 1.501 0 0 1-1.495 1.62H2.875a1.5 1.5 0 0 1-1.494-1.62l.602-7.5v0Z"
+                                                       stroke-width="2"
+                                                       stroke-linecap="round"
+                                                       stroke-linejoin="round" />
+                                                  <path d="M11 8.25V4.5a3 3 0 0 0-6 0v3.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                             </svg>
+                                        </button>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="700" data-aos-offset="300" class="flex flex-col justify-end bg-[#181A1B] px-2 py-2 rounded-lg h-[9.5rem] w-[10.125rem] mt-[6.25rem] group">
+                              <div class="flex justify-center">
+                                   <div class="w-[5.9375rem] mb-6 group-hover:-translate-y-10 transform transition-transform duration-1000">
+                                        <img src="images/content/headphone-3.png" alt="headphone" class="images2 w-full" />
+                                   </div>
+                              </div>
+                              <div class="flex justify-between">
+                                   <div class="flex flex-col">
+                                        <span class="block text-sm font-semibold">Blue</span>
+                                        <span class="block text-sm font-semibold text-[#BDC0C2]">N299K</span>
+                                   </div>
+                                   <div class="flex items-end">
+                                        <button type="button" class="flex justify-center items-center bg-[#0A0A0B] group-hover:bg-white rounded-lg h-[2.1875rem] w-[2.1875rem] transition-colors duration-1000">
+                                             <svg width="16" height="18" class="group-hover:stroke-black transition-all duration-1000" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path
+                                                       d="M1.983 7.38A1.5 1.5 0 0 1 3.479 6h9.043a1.5 1.5 0 0 1 1.495 1.38l.603 7.5a1.501 1.501 0 0 1-1.495 1.62H2.875a1.5 1.5 0 0 1-1.494-1.62l.602-7.5v0Z"
+                                                       stroke-width="2"
+                                                       stroke-linecap="round"
+                                                       stroke-linejoin="round" />
+                                                  <path d="M11 8.25V4.5a3 3 0 0 0-6 0v3.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                             </svg>
+                                        </button>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="700" data-aos-offset="300" class="flex flex-col justify-end bg-[#181A1B] px-2 py-2 rounded-lg h-[9.5rem] w-[10.125rem] mt-[6.25rem] group">
+                              <div class="flex justify-center">
+                                   <div class="w-[5.9375rem] mb-6 group-hover:-translate-y-10 transform transition-transform duration-1000">
+                                        <img src="images/content/headphone-4.png" alt="headphone" class="images2 w-full" />
+                                   </div>
+                              </div>
+                              <div class="flex justify-between">
+                                   <div class="flex flex-col">
+                                        <span class="block text-sm font-semibold">Twilight Grey</span>
+                                        <span class="block text-sm font-semibold text-[#BDC0C2]">N299K</span>
+                                   </div>
+                                   <div class="flex items-end">
+                                        <button type="button" class="flex justify-center items-center bg-[#0A0A0B] group-hover:bg-white rounded-lg h-[2.1875rem] w-[2.1875rem] transition-colors duration-1000">
+                                             <svg width="16" height="18" class="group-hover:stroke-black transition-all duration-1000" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path
+                                                       d="M1.983 7.38A1.5 1.5 0 0 1 3.479 6h9.043a1.5 1.5 0 0 1 1.495 1.38l.603 7.5a1.501 1.501 0 0 1-1.495 1.62H2.875a1.5 1.5 0 0 1-1.494-1.62l.602-7.5v0Z"
+                                                       stroke-width="2"
+                                                       stroke-linecap="round"
+                                                       stroke-linejoin="round" />
+                                                  <path d="M11 8.25V4.5a3 3 0 0 0-6 0v3.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                             </svg>
+                                        </button>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div data-aos="zoom-in-up" data-aos-delay="400" data-aos-duration="700" data-aos-offset="300" class="flex flex-col justify-end bg-[#181A1B] px-2 py-2 rounded-lg h-[9.5rem] w-[10.125rem] mt-[6.25rem] group">
+                              <div class="flex justify-center">
+                                   <div class="w-[5.9375rem] mb-6 group-hover:-translate-y-10 transform transition-transform duration-1000">
+                                        <img src="images/content/headphone-5.png" alt="headphone" class="images2 w-full" />
+                                   </div>
+                              </div>
+                              <div class="flex justify-between">
+                                   <div class="flex flex-col">
+                                        <span class="block text-sm font-semibold">Night Black</span>
+                                        <span class="block text-sm font-semibold text-[#BDC0C2]">N299K</span>
+                                   </div>
+                                   <div class="flex items-end">
+                                        <button type="button" class="flex justify-center items-center bg-[#0A0A0B] group-hover:bg-white rounded-lg h-[2.1875rem] w-[2.1875rem] transition-colors duration-1000">
+                                             <svg width="16" height="18" class="group-hover:stroke-black transition-all duration-1000" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path
+                                                       d="M1.983 7.38A1.5 1.5 0 0 1 3.479 6h9.043a1.5 1.5 0 0 1 1.495 1.38l.603 7.5a1.501 1.501 0 0 1-1.495 1.62H2.875a1.5 1.5 0 0 1-1.494-1.62l.602-7.5v0Z"
+                                                       stroke-width="2"
+                                                       stroke-linecap="round"
+                                                       stroke-linejoin="round" />
+                                                  <path d="M11 8.25V4.5a3 3 0 0 0-6 0v3.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                             </svg>
+                                        </button>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="h-[9.5rem] w-[10.125rem] mt-[6.25rem]"></div>
                     </div>
-                    <div class="mr-6 md:mr-0">
-                        <h5 data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" data-aos-anchor-placement="top-bottom" class="font-semibold text-xl mb-4">Products</h5>
-                        <ul class="space-y-2">
-                            <li>
-                                <span class="block" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
-                                    <a href="#" class="text-[#BDC0C2] font-light text-[0.9375rem] hover:text-white transition-colors">Headphones</a>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="block" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
-                                    <a href="#" class="text-[#BDC0C2] font-light text-[0.9375rem] hover:text-white transition-colors">Earphones</a>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="block" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
-                                    <a href="#" class="text-[#BDC0C2] font-light text-[0.9375rem] hover:text-white transition-colors">Earbuds</a>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="block" data-aos="fade-up" data-aos-delay="250" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
-                                    <a href="#" class="text-[#BDC0C2] font-light text-[0.9375rem] hover:text-white transition-colors">Accessories</a>
-                                </span>
-                            </li>
-                        </ul>
+               </section>
+          </main>
+
+          <footer class="relative mt-[5.75rem] px-6 lg:mt-[11.75rem] transition-[margin] z-30">
+               <div class="flex flex-col md:flex-row md:space-x-20 lg:space-x-40 max-w-[70.8125rem] mx-auto">
+                    <div class="flex-1 flex md:justify-between">
+                         <div class="hidden md:block" data-aos="fade-right" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+                              <a href="index.html" class="logo mt-2 inline-block transform scale-[0.75] text-white transition-transform">
+                                   <svg xmlns="http://www.w3.org/2000/svg" class="logo-svg transform hover: transition-transform duration-700" style="transform-style: preserve-3d" fill="currentColor" width="32.001" height="32">
+                                        <path d="M16.014 0a16 16 0 0 0-4.8.737v8.861a8 8 0 1 1-3.2 6.4V2.136a16 16 0 1 0 8-2.136Zm.2 11.2a4.8 4.8 0 1 0 4.7 4.9 4.8 4.8 0 0 0-4.7-4.9Z" />
+                                   </svg>
+                              </a>
+                         </div>
+                         <div class="mr-6 md:mr-0">
+                              <h5 data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" data-aos-anchor-placement="top-bottom" class="font-semibold text-xl mb-4">Products</h5>
+                              <ul class="space-y-2">
+                                   <li>
+                                        <span class="block" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+                                             <a href="#" class="text-[#BDC0C2] font-light text-[0.9375rem] hover:text-white transition-colors">Headphones</a>
+                                        </span>
+                                   </li>
+                                   <li>
+                                        <span class="block" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+                                             <a href="#" class="text-[#BDC0C2] font-light text-[0.9375rem] hover:text-white transition-colors">Earphones</a>
+                                        </span>
+                                   </li>
+                                   <li>
+                                        <span class="block" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+                                             <a href="#" class="text-[#BDC0C2] font-light text-[0.9375rem] hover:text-white transition-colors">Earbuds</a>
+                                        </span>
+                                   </li>
+                                   <li>
+                                        <span class="block" data-aos="fade-up" data-aos-delay="250" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+                                             <a href="#" class="text-[#BDC0C2] font-light text-[0.9375rem] hover:text-white transition-colors">Accessories</a>
+                                        </span>
+                                   </li>
+                              </ul>
+                         </div>
+                         <div>
+                              <h5 data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" data-aos-anchor-placement="top-bottom" class="font-semibold text-xl mb-4">Support</h5>
+                              <ul class="space-y-2">
+                                   <li>
+                                        <span class="block" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+                                             <a href="#" class="text-[#BDC0C2] font-light text-[0.9375rem] hover:text-white transition-colors">Product help</a>
+                                        </span>
+                                   </li>
+                                   <li>
+                                        <span class="block" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+                                             <a href="#" class="text-[#BDC0C2] font-light text-[0.9375rem] hover:text-white transition-colors">Register</a>
+                                        </span>
+                                   </li>
+                                   <li>
+                                        <span class="block" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+                                             <a href="#" class="text-[#BDC0C2] font-light text-[0.9375rem] hover:text-white transition-colors">Updates</a>
+                                        </span>
+                                   </li>
+                                   <li>
+                                        <span class="block" data-aos="fade-up" data-aos-delay="250" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+                                             <a href="#" class="text-[#BDC0C2] font-light text-[0.9375rem] hover:text-white transition-colors">Provides</a>
+                                        </span>
+                                   </li>
+                              </ul>
+                         </div>
                     </div>
-                    <div>
-                        <h5 data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" data-aos-anchor-placement="top-bottom" class="font-semibold text-xl mb-4">Support</h5>
-                        <ul class="space-y-2">
-                            <li>
-                                <span class="block" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
-                                    <a href="#" class="text-[#BDC0C2] font-light text-[0.9375rem] hover:text-white transition-colors">Product help</a>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="block" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
-                                    <a href="#" class="text-[#BDC0C2] font-light text-[0.9375rem] hover:text-white transition-colors">Register</a>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="block" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
-                                    <a href="#" class="text-[#BDC0C2] font-light text-[0.9375rem] hover:text-white transition-colors">Updates</a>
-                                </span>
-                            </li>
-                            <li>
-                                <span class="block" data-aos="fade-up" data-aos-delay="250" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
-                                    <a href="#" class="text-[#BDC0C2] font-light text-[0.9375rem] hover:text-white transition-colors">Provides</a>
-                                </span>
-                            </li>
-                        </ul>
+                    <div class="flex-1 mt-5 md:mt-0">
+                         <form id="emailForm" class="flex items-center justify-between bg-[#181A1B] rounded-lg py-2 px-4" data-aos="fade-left" data-aos-delay="100" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+                              <div class="flex-1 mr-2">
+                                   <label for="email" class="sr-only">Email</label>
+                                   <input
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        class="block w-full outline-none outline-0 border-none border-0 border-transparent bg-transparent caret-white placeholder-[#BDC0C2] focus:border-transparent focus:bg-transparent focus:text-white focus:placeholder-gray-500 focus:outline-none focus:ring-0 focus:ring-transparent focus:placeholder:text-transparent font-light text-[0.9375rem]"
+                                        placeholder="Email"
+                                        required />
+                              </div>
+
+                              <button
+                                   type="submit"
+                                   class="relative group flex bg-[#0A0A0B] min-w-[8.125rem] w-[8.125rem] h-[3.1875rem] rounded-lg overflow-hidden border border-transparent hover:border-[#3F3F45] transition-all duration-700"
+                                   style="will-change: transform">
+                                   <span class="flex justify-center items-center h-full w-full transform group-hover:-translate-x-[14px] transition-transform cursor-pointer duration-700"> Subscribe </span>
+                                   <span class="absolute top-0 -right-[30px] group-hover:-right-0 h-full flex justify-center items-center px-1.5 bg-[#29292D] transition-all cursor-pointer duration-700">
+                                        <svg width="18" height="16" fill="none" stroke="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                  d="M7.434 8H3L1.518 2.101a.496.496 0 0 1-.018-.105c-.016-.54.58-.915 1.095-.668L16.5 8 2.595 14.672c-.51.245-1.098-.12-1.095-.65a.495.495 0 0 1 .025-.14l1.1-3.632"
+                                                  stroke-width="2.083"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round" />
+                                        </svg>
+                                   </span>
+                              </button>
+                         </form>
+
+                         <div class="flex items-center justify-between mt-6">
+                              <div class="flex space-x-5">
+                                   <span class="block" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+                                        <a href="#" class="flex justify-center items-center text-[#F8F8F8] hover:text-black bg-[#181A1B] hover:bg-white rounded h-8 w-8 group transform hover:-translate-y-1 transition-all duration-700">
+                                             <svg width="10" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="m8.723 9 .445-2.896H6.389V4.225c0-.792.388-1.564 1.633-1.564h1.263V.196S8.139 0 7.043 0C4.755 0 3.259 1.387 3.259 3.898v2.207H.716V9h2.543v7h3.13V9h2.334Z" />
+                                             </svg>
+                                        </a>
+                                   </span>
+                                   <span class="block" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+                                        <a href="#" class="flex justify-center items-center text-[#F8F8F8] hover:text-black bg-[#181A1B] hover:bg-white rounded h-8 w-8 group transform hover:-translate-y-1 transition-all duration-700">
+                                             <svg width="16" height="14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                  <path
+                                                       d="M15.762 2.291a6.218 6.218 0 0 1-1.783.489 3.113 3.113 0 0 0 1.365-1.719 6.2 6.2 0 0 1-1.972.754A3.107 3.107 0 0 0 8.08 4.648 8.82 8.82 0 0 1 1.68 1.403a3.104 3.104 0 0 0-.053 3.027c.24.45.59.835 1.014 1.12a3.098 3.098 0 0 1-1.406-.39v.04a3.107 3.107 0 0 0 2.491 3.046 3.128 3.128 0 0 1-1.403.053 3.107 3.107 0 0 0 2.902 2.156 6.232 6.232 0 0 1-4.599 1.287 8.783 8.783 0 0 0 4.76 1.395c5.713 0 8.837-4.732 8.837-8.836 0-.133-.004-.268-.01-.401a6.312 6.312 0 0 0 1.549-1.607l.001-.002Z" />
+                                             </svg>
+                                        </a>
+                                   </span>
+                                   <span class="block" data-aos="fade-up" data-aos-delay="250" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+                                        <a href="#" class="flex justify-center items-center text-[#F8F8F8] hover:text-black bg-[#181A1B] hover:bg-white rounded h-8 w-8 group transform hover:-translate-y-1 transition-all duration-700">
+                                             <svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                  <path
+                                                       fill-rule="evenodd"
+                                                       clip-rule="evenodd"
+                                                       d="M4.977.71C5.759.676 6.008.668 8 .668c1.992 0 2.242.008 3.023.044.781.035 1.315.16 1.781.34.489.185.932.474 1.299.847.373.366.661.809.845 1.298.182.467.306 1 .342 1.78.036.783.044 1.033.044 3.024 0 1.992-.009 2.241-.044 3.023-.036.78-.16 1.314-.342 1.78-.184.49-.472.933-.845 1.3-.367.373-.81.661-1.299.845-.466.181-1 .305-1.78.341-.782.036-1.032.044-3.024.044s-2.241-.008-3.023-.044c-.78-.035-1.313-.16-1.78-.34a3.597 3.597 0 0 1-1.3-.846 3.595 3.595 0 0 1-.845-1.299c-.181-.467-.305-1-.341-1.78C.675 10.241.667 9.991.667 8c0-1.992.009-2.241.044-3.023.035-.78.16-1.314.34-1.78.185-.49.474-.933.847-1.3a3.595 3.595 0 0 1 1.298-.846c.467-.18 1-.304 1.78-.34h.001Zm5.987 1.32C10.19 1.996 9.958 1.989 8 1.989s-2.19.007-2.963.043c-.715.032-1.103.152-1.362.252a2.277 2.277 0 0 0-.843.548c-.244.237-.43.525-.548.844-.101.258-.22.646-.253 1.362-.035.773-.043 1.005-.043 2.963 0 1.958.008 2.19.043 2.963.033.716.152 1.104.253 1.362.117.318.304.607.548.844.236.243.525.43.843.548.259.1.647.22 1.362.252.773.036 1.005.043 2.963.043 1.959 0 2.19-.007 2.964-.043.715-.032 1.103-.152 1.362-.252.342-.134.586-.292.843-.548.243-.237.43-.526.548-.844.1-.258.22-.646.253-1.362.035-.773.042-1.005.042-2.963 0-1.958-.007-2.19-.042-2.963-.033-.716-.152-1.104-.253-1.362a2.276 2.276 0 0 0-.548-.844 2.276 2.276 0 0 0-.843-.548c-.259-.1-.647-.22-1.362-.252Zm-3.9 8.23a2.446 2.446 0 1 0 1.76-4.563 2.447 2.447 0 0 0-1.76 4.564ZM5.335 5.336a3.77 3.77 0 1 1 5.33 5.33 3.77 3.77 0 0 1-5.33-5.33Zm7.27-.543a.893.893 0 0 0-.276-1.474.891.891 0 1 0 .277 1.474Z" />
+                                             </svg>
+                                        </a>
+                                   </span>
+                                   <span class="block" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+                                        <a href="#" class="flex justify-center items-center text-[#F8F8F8] hover:text-black bg-[#181A1B] hover:bg-white rounded h-8 w-8 group transform hover:-translate-y-1 transition-all duration-700">
+                                             <svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                  <path
+                                                       fill-rule="evenodd"
+                                                       clip-rule="evenodd"
+                                                       d="M.667 1.892A1.225 1.225 0 0 1 1.892.667h12.215a1.225 1.225 0 0 1 1.227 1.225v12.215a1.227 1.227 0 0 1-1.226 1.226H1.892a1.226 1.226 0 0 1-1.225-1.226V1.892ZM6.472 6.26h1.986v.997c.287-.573 1.02-1.09 2.122-1.09 2.113 0 2.614 1.143 2.614 3.238v3.881h-2.138V9.881c0-1.193-.287-1.866-1.015-1.866-1.01 0-1.43.726-1.43 1.866v3.404H6.472V6.26Zm-3.666 6.935h2.138V6.167H2.806v7.027Zm2.444-9.32a1.376 1.376 0 1 1-2.75.061 1.376 1.376 0 0 1 2.75-.06Z" />
+                                             </svg>
+                                        </a>
+                                   </span>
+                              </div>
+
+                              <div class="transform hover:-translate-y-1 transition-transform duration-700">
+                                   <a
+                                        href="#home"
+                                        class="flex justify-center items-center bg-[#181A1B] hover:bg-white rounded w-9 h-9 group transition-colors"
+                                        data-aos="fade-left"
+                                        data-aos-delay="350"
+                                        data-aos-duration="700"
+                                        data-aos-anchor-placement="top-bottom">
+                                        <svg width="16" height="10" class="group-hover:stroke-black transition-colors" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M1.333 8.5 8 1.833 14.666 8.5" stroke-width="2.083" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                   </a>
+                              </div>
+                         </div>
                     </div>
-                </div>
-                <div class="flex-1 mt-5 md:mt-0">
-                    <form id="emailForm" class="flex items-center justify-between bg-[#181A1B] rounded-lg py-2 px-4" data-aos="fade-left" data-aos-delay="100" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
-                        <div class="flex-1 mr-2">
-                            <label for="email" class="sr-only">Email</label>
-                            <input type="email" name="email" id="email" class="block w-full outline-none outline-0 border-none border-0 border-transparent bg-transparent caret-white placeholder-[#BDC0C2] focus:border-transparent focus:bg-transparent focus:text-white focus:placeholder-gray-500 focus:outline-none focus:ring-0 focus:ring-transparent focus:placeholder:text-transparent font-light text-[0.9375rem]" placeholder="Email" required>
-                        </div>
+               </div>
+               <div class="mt-10 my-2">
+                    <p class="text-[#A2A6A9] text-center font-light text-[0.8125rem]">Created By Jake Bogan</p>
+               </div>
+          </footer>
 
-                        <button type="submit" class="relative group flex bg-[#0A0A0B] min-w-[8.125rem] w-[8.125rem] h-[3.1875rem] rounded-lg overflow-hidden border border-transparent hover:border-[#3F3F45] transition-all duration-700" style="will-change: transform;">
-                            <span class="flex justify-center items-center h-full w-full transform group-hover:-translate-x-[14px] transition-transform cursor-pointer duration-700">
-                                Subscribe
-                            </span>
-                            <span class="absolute top-0 -right-[30px] group-hover:-right-0 h-full flex justify-center items-center px-1.5 bg-[#29292D] transition-all cursor-pointer duration-700">
-                                <svg width="18" height="16" fill="none" stroke="#ffffff" xmlns="http://www.w3.org/2000/svg"><path d="M7.434 8H3L1.518 2.101a.496.496 0 0 1-.018-.105c-.016-.54.58-.915 1.095-.668L16.5 8 2.595 14.672c-.51.245-1.098-.12-1.095-.65a.495.495 0 0 1 .025-.14l1.1-3.632" stroke-width="2.083" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </span>
-                        </button>
-                    </form>
-
-                    <div class="flex items-center justify-between mt-6">
-                        <div class="flex space-x-5">
-                            <span class="block" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
-                                <a href="#" class="flex justify-center items-center text-[#F8F8F8] hover:text-black bg-[#181A1B] hover:bg-white rounded h-8 w-8 group transform hover:-translate-y-1 transition-all duration-700">
-                                    <svg width="10" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m8.723 9 .445-2.896H6.389V4.225c0-.792.388-1.564 1.633-1.564h1.263V.196S8.139 0 7.043 0C4.755 0 3.259 1.387 3.259 3.898v2.207H.716V9h2.543v7h3.13V9h2.334Z"/></svg>
-                                </a>
-                            </span>
-                            <span class="block" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
-                                <a href="#" class="flex justify-center items-center text-[#F8F8F8] hover:text-black bg-[#181A1B] hover:bg-white rounded h-8 w-8 group transform hover:-translate-y-1 transition-all duration-700">
-                                    <svg width="16" height="14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M15.762 2.291a6.218 6.218 0 0 1-1.783.489 3.113 3.113 0 0 0 1.365-1.719 6.2 6.2 0 0 1-1.972.754A3.107 3.107 0 0 0 8.08 4.648 8.82 8.82 0 0 1 1.68 1.403a3.104 3.104 0 0 0-.053 3.027c.24.45.59.835 1.014 1.12a3.098 3.098 0 0 1-1.406-.39v.04a3.107 3.107 0 0 0 2.491 3.046 3.128 3.128 0 0 1-1.403.053 3.107 3.107 0 0 0 2.902 2.156 6.232 6.232 0 0 1-4.599 1.287 8.783 8.783 0 0 0 4.76 1.395c5.713 0 8.837-4.732 8.837-8.836 0-.133-.004-.268-.01-.401a6.312 6.312 0 0 0 1.549-1.607l.001-.002Z"/></svg>
-                                </a>
-                            </span>
-                            <span class="block" data-aos="fade-up" data-aos-delay="250" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
-                                <a href="#" class="flex justify-center items-center text-[#F8F8F8] hover:text-black bg-[#181A1B] hover:bg-white rounded h-8 w-8 group transform hover:-translate-y-1 transition-all duration-700">
-                                    <svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.977.71C5.759.676 6.008.668 8 .668c1.992 0 2.242.008 3.023.044.781.035 1.315.16 1.781.34.489.185.932.474 1.299.847.373.366.661.809.845 1.298.182.467.306 1 .342 1.78.036.783.044 1.033.044 3.024 0 1.992-.009 2.241-.044 3.023-.036.78-.16 1.314-.342 1.78-.184.49-.472.933-.845 1.3-.367.373-.81.661-1.299.845-.466.181-1 .305-1.78.341-.782.036-1.032.044-3.024.044s-2.241-.008-3.023-.044c-.78-.035-1.313-.16-1.78-.34a3.597 3.597 0 0 1-1.3-.846 3.595 3.595 0 0 1-.845-1.299c-.181-.467-.305-1-.341-1.78C.675 10.241.667 9.991.667 8c0-1.992.009-2.241.044-3.023.035-.78.16-1.314.34-1.78.185-.49.474-.933.847-1.3a3.595 3.595 0 0 1 1.298-.846c.467-.18 1-.304 1.78-.34h.001Zm5.987 1.32C10.19 1.996 9.958 1.989 8 1.989s-2.19.007-2.963.043c-.715.032-1.103.152-1.362.252a2.277 2.277 0 0 0-.843.548c-.244.237-.43.525-.548.844-.101.258-.22.646-.253 1.362-.035.773-.043 1.005-.043 2.963 0 1.958.008 2.19.043 2.963.033.716.152 1.104.253 1.362.117.318.304.607.548.844.236.243.525.43.843.548.259.1.647.22 1.362.252.773.036 1.005.043 2.963.043 1.959 0 2.19-.007 2.964-.043.715-.032 1.103-.152 1.362-.252.342-.134.586-.292.843-.548.243-.237.43-.526.548-.844.1-.258.22-.646.253-1.362.035-.773.042-1.005.042-2.963 0-1.958-.007-2.19-.042-2.963-.033-.716-.152-1.104-.253-1.362a2.276 2.276 0 0 0-.548-.844 2.276 2.276 0 0 0-.843-.548c-.259-.1-.647-.22-1.362-.252Zm-3.9 8.23a2.446 2.446 0 1 0 1.76-4.563 2.447 2.447 0 0 0-1.76 4.564ZM5.335 5.336a3.77 3.77 0 1 1 5.33 5.33 3.77 3.77 0 0 1-5.33-5.33Zm7.27-.543a.893.893 0 0 0-.276-1.474.891.891 0 1 0 .277 1.474Z"/></svg>
-                                </a>
-                            </span>
-                            <span class="block" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
-                                <a href="#" class="flex justify-center items-center text-[#F8F8F8] hover:text-black bg-[#181A1B] hover:bg-white rounded h-8 w-8 group transform hover:-translate-y-1 transition-all duration-700">
-                                    <svg width="16" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M.667 1.892A1.225 1.225 0 0 1 1.892.667h12.215a1.225 1.225 0 0 1 1.227 1.225v12.215a1.227 1.227 0 0 1-1.226 1.226H1.892a1.226 1.226 0 0 1-1.225-1.226V1.892ZM6.472 6.26h1.986v.997c.287-.573 1.02-1.09 2.122-1.09 2.113 0 2.614 1.143 2.614 3.238v3.881h-2.138V9.881c0-1.193-.287-1.866-1.015-1.866-1.01 0-1.43.726-1.43 1.866v3.404H6.472V6.26Zm-3.666 6.935h2.138V6.167H2.806v7.027Zm2.444-9.32a1.376 1.376 0 1 1-2.75.061 1.376 1.376 0 0 1 2.75-.06Z"/></svg>
-                                </a>
-                            </span>
-                        </div>
-
-                        <div class="transform hover:-translate-y-1 transition-transform duration-700">
-                            <a href="#home" class="flex justify-center items-center bg-[#181A1B] hover:bg-white rounded w-9 h-9 group transition-colors" data-aos="fade-left" data-aos-delay="350" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
-                                <svg width="16" height="10" class="group-hover:stroke-black transition-colors" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.333 8.5 8 1.833 14.666 8.5" stroke-width="2.083" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-10 my-2">
-                <p class="text-[#A2A6A9] text-center font-light text-[0.8125rem]">Created By Jake Bogan</p>
-            </div>
-        </footer>
-
-        <script src="js/lib/aos.js"></script>
-        <script src="js/lib/simpleParallax.min.js"></script>
-        <script src="js/app.js"></script>
-    </body>
+          <script src="js/lib/aos.js"></script>
+          <script src="js/lib/simpleParallax.min.js"></script>
+          <script src="js/app.js"></script>
+     </body>
 </html>
